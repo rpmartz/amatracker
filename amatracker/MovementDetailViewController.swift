@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MovementDetailViewController: UIViewController {
+class MovementDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var movementNameLabel: UILabel!
     @IBOutlet weak var movementRecordTableView: UITableView!
     
@@ -25,6 +26,29 @@ class MovementDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    // MARK: UITableViewDataSource functions
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = self.movementRecordTableView.dequeueReusableCellWithIdentifier("movementRecordCell") as! MovementRecordTableCell
+        cell.recordLabel.text = "Some Record"
+        
+        return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    // MARK: UITableViewDelegate functions
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        NSLog("selected row at index path \(indexPath.row)")
+    }
+    
+    
     
 
     /*

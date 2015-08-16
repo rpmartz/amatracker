@@ -10,6 +10,9 @@ import UIKit
 
 class MovementRecordTableCell: UITableViewCell {
 
+    @IBOutlet weak var recordLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
