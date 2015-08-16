@@ -118,35 +118,5 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         
     }
     
-
-    private func buildMovementsArray() -> [MovementDisplayItem] {
-        let backSquat = MovementDisplayItem(name: "Back Squat")
-        let frontSquat = MovementDisplayItem(name: "Front Squat")
-        let overheadSquat = MovementDisplayItem(name: "Overhead Squat")
-        let deadlift = MovementDisplayItem(name: "Deadlift")
-        let shoulderPress = MovementDisplayItem(name: "Shoulder Press")
-        let pushPress = MovementDisplayItem(name: "Push Press")
-        let jerk = MovementDisplayItem(name: "Jerk")
-        let powerClean = MovementDisplayItem(name: "Power Clean")
-        let clean = MovementDisplayItem(name: "Clean")
-        let cleanAndJerk = MovementDisplayItem(name: "Clean and Jerk")
-        let powerSnatch = MovementDisplayItem(name: "Power Snatch")
-        let snatch = MovementDisplayItem(name: "Snatch")
-        
-        let movementArray = [backSquat, frontSquat, overheadSquat, deadlift, shoulderPress, pushPress, jerk, powerClean, clean, cleanAndJerk, powerSnatch, snatch]
-        
-        return movementArray
-    }
-
-
-    
 }
 
-class MovementDisplayItem {
-    
-    let name : String!
-    
-    init(name: String) {
-        self.name = name
-    }
-}
