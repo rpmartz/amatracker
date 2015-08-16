@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473252D1B805C3C00F4B1FD /* AppDelegate.swift */; };
+		947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */; };
+		947325331B805C3C00F4B1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* ViewController.swift */; };
+		947325361B805C3C00F4B1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947325341B805C3C00F4B1FD /* Main.storyboard */; };
+		947325381B805C3C00F4B1FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947325371B805C3C00F4B1FD /* Images.xcassets */; };
+		9473253B1B805C3C00F4B1FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947325391B805C3C00F4B1FD /* LaunchScreen.xib */; };
+		947325471B805C3D00F4B1FD /* amatrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325461B805C3D00F4B1FD /* amatrackerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		947325411B805C3D00F4B1FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947325201B805C3C00F4B1FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 947325271B805C3C00F4B1FD;
+			remoteInfo = amatracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		947325281B805C3C00F4B1FD /* amatracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amatracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9473252C1B805C3C00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9473252D1B805C3C00F4B1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		947325301B805C3C00F4B1FD /* amatracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = amatracker.xcdatamodel; sourceTree = "<group>"; };
+		947325321B805C3C00F4B1FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		947325351B805C3C00F4B1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		947325371B805C3C00F4B1FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9473253A1B805C3C00F4B1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		947325401B805C3D00F4B1FD /* amatrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = amatrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		947325451B805C3D00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947325461B805C3D00F4B1FD /* amatrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amatrackerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		947325251B805C3C00F4B1FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9473253D1B805C3D00F4B1FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9473251F1B805C3C00F4B1FD = {
+			isa = PBXGroup;
+			children = (
+				9473252A1B805C3C00F4B1FD /* amatracker */,
+				947325431B805C3D00F4B1FD /* amatrackerTests */,
+				947325291B805C3C00F4B1FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		947325291B805C3C00F4B1FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				947325281B805C3C00F4B1FD /* amatracker.app */,
+				947325401B805C3D00F4B1FD /* amatrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9473252A1B805C3C00F4B1FD /* amatracker */ = {
+			isa = PBXGroup;
+			children = (
+				9473252D1B805C3C00F4B1FD /* AppDelegate.swift */,
+				947325321B805C3C00F4B1FD /* ViewController.swift */,
+				947325341B805C3C00F4B1FD /* Main.storyboard */,
+				947325371B805C3C00F4B1FD /* Images.xcassets */,
+				947325391B805C3C00F4B1FD /* LaunchScreen.xib */,
+				9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */,
+				9473252B1B805C3C00F4B1FD /* Supporting Files */,
+			);
+			path = amatracker;
+			sourceTree = "<group>";
+		};
+		9473252B1B805C3C00F4B1FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9473252C1B805C3C00F4B1FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		947325431B805C3D00F4B1FD /* amatrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				947325461B805C3D00F4B1FD /* amatrackerTests.swift */,
+				947325441B805C3D00F4B1FD /* Supporting Files */,
+			);
+			path = amatrackerTests;
+			sourceTree = "<group>";
+		};
+		947325441B805C3D00F4B1FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				947325451B805C3D00F4B1FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		947325271B805C3C00F4B1FD /* amatracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9473254A1B805C3D00F4B1FD /* Build configuration list for PBXNativeTarget "amatracker" */;
+			buildPhases = (
+				947325241B805C3C00F4B1FD /* Sources */,
+				947325251B805C3C00F4B1FD /* Frameworks */,
+				947325261B805C3C00F4B1FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = amatracker;
+			productName = amatracker;
+			productReference = 947325281B805C3C00F4B1FD /* amatracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9473253F1B805C3D00F4B1FD /* amatrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9473254D1B805C3D00F4B1FD /* Build configuration list for PBXNativeTarget "amatrackerTests" */;
+			buildPhases = (
+				9473253C1B805C3D00F4B1FD /* Sources */,
+				9473253D1B805C3D00F4B1FD /* Frameworks */,
+				9473253E1B805C3D00F4B1FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				947325421B805C3D00F4B1FD /* PBXTargetDependency */,
+			);
+			name = amatrackerTests;
+			productName = amatrackerTests;
+			productReference = 947325401B805C3D00F4B1FD /* amatrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		947325201B805C3C00F4B1FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = ryan;
+				TargetAttributes = {
+					947325271B805C3C00F4B1FD = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					9473253F1B805C3D00F4B1FD = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 947325271B805C3C00F4B1FD;
+					};
+				};
+			};
+			buildConfigurationList = 947325231B805C3C00F4B1FD /* Build configuration list for PBXProject "amatracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9473251F1B805C3C00F4B1FD;
+			productRefGroup = 947325291B805C3C00F4B1FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				947325271B805C3C00F4B1FD /* amatracker */,
+				9473253F1B805C3D00F4B1FD /* amatrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		947325261B805C3C00F4B1FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947325361B805C3C00F4B1FD /* Main.storyboard in Resources */,
+				9473253B1B805C3C00F4B1FD /* LaunchScreen.xib in Resources */,
+				947325381B805C3C00F4B1FD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9473253E1B805C3D00F4B1FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		947325241B805C3C00F4B1FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947325331B805C3C00F4B1FD /* ViewController.swift in Sources */,
+				947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */,
+				9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9473253C1B805C3D00F4B1FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947325471B805C3D00F4B1FD /* amatrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		947325421B805C3D00F4B1FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 947325271B805C3C00F4B1FD /* amatracker */;
+			targetProxy = 947325411B805C3D00F4B1FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		947325341B805C3C00F4B1FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				947325351B805C3C00F4B1FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		947325391B805C3C00F4B1FD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9473253A1B805C3C00F4B1FD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		947325481B805C3D00F4B1FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		947325491B805C3D00F4B1FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9473254B1B805C3D00F4B1FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = amatracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9473254C1B805C3D00F4B1FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = amatracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9473254E1B805C3D00F4B1FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = amatrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/amatracker.app/amatracker";
+			};
+			name = Debug;
+		};
+		9473254F1B805C3D00F4B1FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = amatrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/amatracker.app/amatracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		947325231B805C3C00F4B1FD /* Build configuration list for PBXProject "amatracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				947325481B805C3D00F4B1FD /* Debug */,
+				947325491B805C3D00F4B1FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9473254A1B805C3D00F4B1FD /* Build configuration list for PBXNativeTarget "amatracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9473254B1B805C3D00F4B1FD /* Debug */,
+				9473254C1B805C3D00F4B1FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9473254D1B805C3D00F4B1FD /* Build configuration list for PBXNativeTarget "amatrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9473254E1B805C3D00F4B1FD /* Debug */,
+				9473254F1B805C3D00F4B1FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				947325301B805C3C00F4B1FD /* amatracker.xcdatamodel */,
+			);
+			currentVersion = 947325301B805C3C00F4B1FD /* amatracker.xcdatamodel */;
+			path = amatracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 947325201B805C3C00F4B1FD /* Project object */;
+}
