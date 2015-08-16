@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MovementListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
@@ -16,13 +17,61 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
 
     @IBOutlet weak var movementTable: UITableView!
     
-    var movements : [MovementDisplayItem] = []
+    var movements : [Movement] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        movements = buildMovementsArray()
-      
+        movements = fetchMovements()
+    }
+    
+    func fetchMovements() -> [Movement] {
+        let request = NSFetchRequest(entityName: "Movement")
+        
+        // add type since we're casting
+        let appDelegate : AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context = appDelegate.managedObjectContext!
+        
+        var error: NSError?
+        var movementArray = context.executeFetchRequest(request, error: &error)
+        
+        if movementArray?.count == 0 {
+            createMovements()
+            movementArray = context.executeFetchRequest(request, error: &error)
+        }
+        
+        return movementArray as! [Movement]
+        
+    }
+    
+    private func createMovements() {
+        NSLog("creating movements")
+        let movementNames = [
+            "Back Squat",
+            "Front Squat",
+            "Overhead Squat",
+            "Deadlift",
+            "Shoulder Press",
+            "Push Press",
+            "Jerk",
+            "Power Clean",
+            "Clean",
+            "Clean and Jerk",
+            "Power Snatch",
+            "Snatch"
+        ]
+        
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        for name in movementNames {
+            let entityDescription = NSEntityDescription.entityForName("Movement", inManagedObjectContext: managedObjectContext!)
+            let movement = Movement(entity: entityDescription!, insertIntoManagedObjectContext:  managedObjectContext!)
+            movement.name = name
+        }
+        
+        (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
+
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,35 +118,5 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         
     }
     
-
-    private func buildMovementsArray() -> [MovementDisplayItem] {
-        let backSquat = MovementDisplayItem(name: "Back Squat")
-        let frontSquat = MovementDisplayItem(name: "Front Squat")
-        let overheadSquat = MovementDisplayItem(name: "Overhead Squat")
-        let deadlift = MovementDisplayItem(name: "Deadlift")
-        let shoulderPress = MovementDisplayItem(name: "Shoulder Press")
-        let pushPress = MovementDisplayItem(name: "Push Press")
-        let jerk = MovementDisplayItem(name: "Jerk")
-        let powerClean = MovementDisplayItem(name: "Power Clean")
-        let clean = MovementDisplayItem(name: "Clean")
-        let cleanAndJerk = MovementDisplayItem(name: "Clean and Jerk")
-        let powerSnatch = MovementDisplayItem(name: "Power Snatch")
-        let snatch = MovementDisplayItem(name: "Snatch")
-        
-        let movementArray = [backSquat, frontSquat, overheadSquat, deadlift, shoulderPress, pushPress, jerk, powerClean, clean, cleanAndJerk, powerSnatch, snatch]
-        
-        return movementArray
-    }
-
-
-    
 }
 
-class MovementDisplayItem {
-    
-    let name : String!
-    
-    init(name: String) {
-        self.name = name
-    }
-}
