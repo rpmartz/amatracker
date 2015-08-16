@@ -63,7 +63,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd-MMM-yyyy"
         cell.dateLabel.text = dateFormatter.stringFromDate(record.date)
-        cell.weightLabel.text = "\(record.numberOfReps) kg"
+        cell.weightLabel.text = "\(record.weight) kg"
         
         return cell
         
@@ -76,7 +76,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     // MARK: UITableViewDelegate functions
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        NSLog("selected row at index path \(indexPath.row)")
+        // TODO: implement something here
     }
     
     
