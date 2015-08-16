@@ -14,6 +14,8 @@
 		947325381B805C3C00F4B1FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947325371B805C3C00F4B1FD /* Images.xcassets */; };
 		9473253B1B805C3C00F4B1FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947325391B805C3C00F4B1FD /* LaunchScreen.xib */; };
 		947325471B805C3D00F4B1FD /* amatrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325461B805C3D00F4B1FD /* amatrackerTests.swift */; };
+		947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325501B805EE800F4B1FD /* MovementListViewController.swift */; };
+		947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325521B8060CE00F4B1FD /* MovementTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		947325401B805C3D00F4B1FD /* amatrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = amatrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		947325451B805C3D00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		947325461B805C3D00F4B1FD /* amatrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amatrackerTests.swift; sourceTree = "<group>"; };
+		947325501B805EE800F4B1FD /* MovementListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementListViewController.swift; sourceTree = "<group>"; };
+		947325521B8060CE00F4B1FD /* MovementTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				947325391B805C3C00F4B1FD /* LaunchScreen.xib */,
 				9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */,
 				9473252B1B805C3C00F4B1FD /* Supporting Files */,
+				947325501B805EE800F4B1FD /* MovementListViewController.swift */,
+				947325521B8060CE00F4B1FD /* MovementTableCell.swift */,
 			);
 			path = amatracker;
 			sourceTree = "<group>";
@@ -217,6 +223,8 @@
 			files = (
 				947325331B805C3C00F4B1FD /* ViewController.swift in Sources */,
 				947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */,
+				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
+				947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */,
 				9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
