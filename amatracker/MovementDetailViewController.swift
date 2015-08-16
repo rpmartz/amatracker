@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class MovementDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -17,33 +16,16 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     var movement: Movement!
     var records: [Record] = []
     
+    let recordService = RecordService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         movementNameLabel.text = movement.name
         
-        // fetch the records
-        let request = NSFetchRequest(entityName: "Record")
-        
-        // add type since we're casting
-        let appDelegate : AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        let context = appDelegate.managedObjectContext!
-        
-        var error: NSError?
-        let fetchedRecords = context.executeFetchRequest(request, error: &error) as! [Record]
-        
-        var filteredRecords: [Record] = []
-        if fetchedRecords.count > 0 {
-            // TODO this should be done in the query
-            for record in fetchedRecords {
-                if(record.movement == movement) {
-                    filteredRecords.append(record)
-                }
-            }
-        }
-        
-        records = filteredRecords
+        let fetchedRecords = recordService.loadRecordsByMovement(movement)
+        records = fetchedRecords
         
     }
 
@@ -51,7 +33,6 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     // MARK: UITableViewDataSource functions
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
