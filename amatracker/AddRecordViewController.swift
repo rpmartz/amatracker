@@ -98,7 +98,7 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
         record.numberOfReps = reps
         record.weight = weightLifted
         record.date = recordDate
-        //   record.movement = Movement()
+        record.movement = currentMovement
         record.unit = "kg"
         
         appDelegate.saveContext()
