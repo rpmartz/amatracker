@@ -14,19 +14,6 @@ class RecordService {
     
     let appDelegate : AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
     
-    func loadRecords() -> [Record]! {
-        let request = NSFetchRequest(entityName: "Record")
-        
-        // add type since we're casting
-      
-        let context = appDelegate.managedObjectContext!
-        
-        var error: NSError?
-        let fetchedRecords = context.executeFetchRequest(request, error: &error) as! [Record]
-        
-        return fetchedRecords
-    }
-    
     func loadRecordsByMovement(movement: Movement) -> [Record]! {
         let movementPredicate = NSPredicate(format: "movement == %@", movement)
         let request = NSFetchRequest(entityName: "Record")
