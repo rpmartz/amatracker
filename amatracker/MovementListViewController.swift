@@ -9,6 +9,10 @@
 import UIKit
 
 class MovementListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+    
+    // MARK: Constants
+    let MOVEMENT_TABLE_CELL = "movementTableCell"
+    let MOVEMENT_DETAIL_SEGUE = "movementDetailSegue"
 
     @IBOutlet weak var movementTable: UITableView!
     
@@ -17,9 +21,8 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view
         movements = buildMovementsArray()
-        NSLog("vie did load from movement list view controller")
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,8 +35,7 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let currentMovement = movements[indexPath.row]
-        NSLog("current movement is \(currentMovement.name)")
-        var cell: MovementTableCell = tableView.dequeueReusableCellWithIdentifier("movementTableCell") as! MovementTableCell
+        var cell: MovementTableCell = tableView.dequeueReusableCellWithIdentifier(MOVEMENT_TABLE_CELL) as! MovementTableCell
         cell.movementNameLabel.text = currentMovement.name
         
         return cell
@@ -45,20 +47,28 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     
     // MARK: UITableViewDelegate required functions
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        performSegueWithIdentifier(MOVEMENT_DETAIL_SEGUE, sender: self)
+        performSegueWithIdentifier(MOVEMENT_DETAIL_SEGUE, sender: self)
     }
 
     
 
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == MOVEMENT_DETAIL_SEGUE) {
+            let destinationViewController : MovementDetailViewController = segue.destinationViewController  as! MovementDetailViewController
+            
+            let indexPathOfSelectedRow : NSIndexPath = self.movementTable.indexPathForSelectedRow()!
+            let selectedMovement = movements[indexPathOfSelectedRow.row]
+            destinationViewController.movement = selectedMovement
+        }
+        
     }
-    */
+    
 
     private func buildMovementsArray() -> [MovementDisplayItem] {
         let backSquat = MovementDisplayItem(name: "Back Squat")
