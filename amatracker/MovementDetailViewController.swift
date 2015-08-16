@@ -13,7 +13,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var movementNameLabel: UILabel!
     @IBOutlet weak var movementRecordTableView: UITableView!
     
-    var movement: MovementDisplayItem!
+    var movement: Movement!
     
     override func viewDidLoad() {
         super.viewDidLoad()
