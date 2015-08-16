@@ -49,6 +49,9 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     
+    @IBAction func addRecordButtonPressed(sender: AnyObject) {
+        performSegueWithIdentifier("addRecordSegue", sender: nil)
+    }
     
 
     /*
