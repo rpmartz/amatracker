@@ -17,6 +17,8 @@
 		947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325501B805EE800F4B1FD /* MovementListViewController.swift */; };
 		947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325521B8060CE00F4B1FD /* MovementTableCell.swift */; };
 		947325551B80670100F4B1FD /* MovementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325541B80670100F4B1FD /* MovementDetailViewController.swift */; };
+		947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325561B80704D00F4B1FD /* AddRecordViewController.swift */; };
+		947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		947325501B805EE800F4B1FD /* MovementListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementListViewController.swift; sourceTree = "<group>"; };
 		947325521B8060CE00F4B1FD /* MovementTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementTableCell.swift; sourceTree = "<group>"; };
 		947325541B80670100F4B1FD /* MovementDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementDetailViewController.swift; sourceTree = "<group>"; };
+		947325561B80704D00F4B1FD /* AddRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
+		947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementRecordTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				947325501B805EE800F4B1FD /* MovementListViewController.swift */,
 				947325521B8060CE00F4B1FD /* MovementTableCell.swift */,
 				947325541B80670100F4B1FD /* MovementDetailViewController.swift */,
+				947325561B80704D00F4B1FD /* AddRecordViewController.swift */,
+				947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */,
 			);
 			path = amatracker;
 			sourceTree = "<group>";
@@ -226,6 +232,8 @@
 			files = (
 				947325551B80670100F4B1FD /* MovementDetailViewController.swift in Sources */,
 				947325331B805C3C00F4B1FD /* ViewController.swift in Sources */,
+				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
+				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
 				947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */,
 				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
 				947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */,
