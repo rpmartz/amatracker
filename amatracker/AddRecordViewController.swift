@@ -12,12 +12,11 @@ import CoreData
 class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var weightPicker: UIPickerView!
-
     @IBOutlet weak var stepper: UIStepper!
-  
     @IBOutlet weak var repsLabel: UILabel!
-    
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    var currentMovement: Movement!
     var pickerData: [[NSString]]!
     
     enum pickerComponent:Int{
@@ -67,6 +66,7 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
         
         
         // Do any additional setup after loading the view.
+
     }
     
     override func didReceiveMemoryWarning() {
