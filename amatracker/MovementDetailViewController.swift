@@ -85,5 +85,18 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
+    @IBAction func segmentedControlPressed(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            NSLog("case 0 pressed")
+        case 1:
+            NSLog("case 1 pressed")
+            
+        default:
+            break
+        }
+    }
+    
+    
 
 }
