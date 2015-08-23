@@ -108,6 +108,16 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         return rec1.date.timeIntervalSince1970 > rec2.date.timeIntervalSince1970
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            let recordToDelete: Record = records[indexPath.row]
+            recordService.deleteRecord(recordToDelete)
+            
+            records.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
     
 
 }

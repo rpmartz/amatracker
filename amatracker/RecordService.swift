@@ -27,4 +27,12 @@ class RecordService {
         return fetchedRecords
         
     }
+    
+    func deleteRecord(record:Record) -> Void {
+        let context = appDelegate.managedObjectContext!
+        context.deleteObject(record)
+        
+        var error: NSError?
+        context.save(&error)
+    }
 }
