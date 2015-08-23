@@ -88,13 +88,24 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func segmentedControlPressed(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            NSLog("case 0 pressed")
+            records.sort(sortByDate)
+            self.movementRecordTableView.reloadData()
+           
         case 1:
-            NSLog("case 1 pressed")
+            records.sort(sortByWeight)
+            self.movementRecordTableView.reloadData()
             
         default:
             break
         }
+    }
+    
+    func sortByWeight(rec1: Record, rec2: Record) -> Bool {
+        return rec1.weight as! Double > rec2.weight as! Double
+    }
+    
+    func sortByDate(rec1: Record, rec2: Record) -> Bool {
+        return rec1.date.timeIntervalSince1970 > rec2.date.timeIntervalSince1970
     }
     
     
