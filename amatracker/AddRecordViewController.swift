@@ -103,6 +103,9 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
         
         appDelegate.saveContext()
         
+//        let recordListViewController = self.parentViewController as! MovementDetailViewController
+//        recordListViewController.loadRecords()
+        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -144,7 +147,7 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        NSLog("selected row. Row:  [\(row)]. Component: [\(component)]")
+//        NSLog("selected row. Row:  [\(row)]. Component: [\(component)]")
     }
 
 }

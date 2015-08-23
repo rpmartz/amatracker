@@ -23,10 +23,17 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
 
         // Do any additional setup after loading the view.
         movementNameLabel.text = movement.name
-        
+        loadRecords()
+    }
+    
+    func loadRecords() {
         let fetchedRecords = recordService.loadRecordsByMovement(movement)
         records = fetchedRecords
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        loadRecords()
+        self.movementRecordTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
