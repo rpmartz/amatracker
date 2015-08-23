@@ -12,12 +12,11 @@ import CoreData
 class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var weightPicker: UIPickerView!
-
     @IBOutlet weak var stepper: UIStepper!
-  
     @IBOutlet weak var repsLabel: UILabel!
-    
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    var currentMovement: Movement!
     var pickerData: [[NSString]]!
     
     enum pickerComponent:Int{
@@ -67,6 +66,7 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
         
         
         // Do any additional setup after loading the view.
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,10 +98,13 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
         record.numberOfReps = reps
         record.weight = weightLifted
         record.date = recordDate
-        //   record.movement = Movement()
+        record.movement = currentMovement
         record.unit = "kg"
         
         appDelegate.saveContext()
+        
+//        let recordListViewController = self.parentViewController as! MovementDetailViewController
+//        recordListViewController.loadRecords()
         
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -144,7 +147,7 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        NSLog("selected row. Row:  [\(row)]. Component: [\(component)]")
+//        NSLog("selected row. Row:  [\(row)]. Component: [\(component)]")
     }
 
 }

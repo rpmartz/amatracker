@@ -25,11 +25,11 @@
                                     <rect key="frame" x="75" y="72" width="251" height="21"/>
                                 </variation>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-kB-bd5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-kB-bd5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movementRecordCell" id="Lpn-ga-H55" customClass="MovementRecordTableCell" customModule="amatracker" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movementRecordCell" rowHeight="70" id="Lpn-ga-H55" customClass="MovementRecordTableCell" customModule="amatracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lpn-ga-H55" id="PJ1-RF-4Vf">
@@ -41,28 +41,52 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="42" y="11" width="149" height="21"/>
+                                                        <rect key="frame" x="21" y="8" width="149" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36e-KH-ow9">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="21" y="37" width="149" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f22-b9-tRN">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="251" y="24" width="135" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="WTb-2j-9Jd"/>
+                                                    <exclude reference="36e-KH-ow9"/>
+                                                    <exclude reference="f22-b9-tRN"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="WTb-2j-9Jd"/>
+                                                    <include reference="36e-KH-ow9"/>
+                                                    <include reference="f22-b9-tRN"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="f22-b9-tRN" id="99o-PS-VtY"/>
                                             <outlet property="recordLabel" destination="WTb-2j-9Jd" id="YuM-Ef-m37"/>
+                                            <outlet property="weightLabel" destination="36e-KH-ow9" id="yrW-pv-4SR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="93" width="400" height="518"/>
+                                    <rect key="frame" x="0.0" y="101" width="400" height="510"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="cvj-wp-V59"/>
@@ -86,6 +110,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nGD-CS-5wo">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="PWF-uf-u2d">
+                            <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Sort By Date"/>
+                                <segment title="Sort By Weight"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedControlPressed:" destination="vXZ-lx-hvc" eventType="valueChanged" id="XQr-Td-qS8"/>
+                            </connections>
+                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ziv-GL-Ps4">
                             <connections>
                                 <action selector="addRecordButtonPressed:" destination="vXZ-lx-hvc" id="sPP-0y-LXY"/>
@@ -112,57 +148,31 @@
                         <viewControllerLayoutGuide type="bottom" id="1Qi-2J-waX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KJO-Vw-Cq5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QD-sn-qhu">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="28" y="188" width="40" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWb-ju-6WX">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="359" width="36" height="21"/>
+                                    <rect key="frame" x="38" y="342" width="36" height="21"/>
                                 </variation>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64g-DH-nXd">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="57" width="400" height="137"/>
+                                    <rect key="frame" x="0.0" y="88" width="400" height="137"/>
                                 </variation>
                             </pickerView>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jm3-Y9-h66">
-                                <rect key="frame" x="-47" y="-14" width="94" height="29"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="153" y="277" width="94" height="29"/>
-                                </variation>
-                                <connections>
-                                    <action selector="stepperPressed:" destination="XE8-1V-vKC" eventType="valueChanged" id="Ct8-AV-nZA"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjp-y7-KnI">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="158" y="217" width="78" height="34"/>
-                                </variation>
-                            </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="W7c-5e-rWb">
                                 <rect key="frame" x="-160" y="-81" width="320" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="461421959.90953302">
                                     <!--2015-08-16 12:45:59 +0000-->
                                 </date>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="410" width="400" height="162"/>
+                                    <rect key="frame" x="0.0" y="375" width="400" height="48"/>
                                 </variation>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE7-qw-3c8">
@@ -171,7 +181,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="28" y="5" width="56" height="30"/>
+                                    <rect key="frame" x="28" y="21" width="56" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="cancelButtonPressed:" destination="XE8-1V-vKC" eventType="touchUpInside" id="oHn-So-iHY"/>
@@ -183,7 +193,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="301" y="5" width="67" height="30"/>
+                                    <rect key="frame" x="301" y="21" width="67" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="XE8-1V-vKC" eventType="touchUpInside" id="VMN-mz-Ehc"/>
@@ -195,35 +205,62 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="43" width="53" height="21"/>
+                                    <rect key="frame" x="22" y="74" width="53" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QD-sn-qhu">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="233" width="40" height="21"/>
+                                </variation>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jm3-Y9-h66">
+                                <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="239" y="264" width="94" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stepperPressed:" destination="XE8-1V-vKC" eventType="valueChanged" id="Ct8-AV-nZA"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjp-y7-KnI">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="60" y="262" width="78" height="34"/>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="3QD-sn-qhu"/>
                                 <exclude reference="GWb-ju-6WX"/>
                                 <exclude reference="64g-DH-nXd"/>
-                                <exclude reference="jm3-Y9-h66"/>
-                                <exclude reference="xjp-y7-KnI"/>
                                 <exclude reference="W7c-5e-rWb"/>
                                 <exclude reference="bE7-qw-3c8"/>
                                 <exclude reference="yfM-H7-2tQ"/>
                                 <exclude reference="fXn-Aw-jVj"/>
+                                <exclude reference="3QD-sn-qhu"/>
+                                <exclude reference="jm3-Y9-h66"/>
+                                <exclude reference="xjp-y7-KnI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="3QD-sn-qhu"/>
                                 <include reference="GWb-ju-6WX"/>
                                 <include reference="64g-DH-nXd"/>
-                                <include reference="jm3-Y9-h66"/>
-                                <include reference="xjp-y7-KnI"/>
                                 <include reference="W7c-5e-rWb"/>
                                 <include reference="bE7-qw-3c8"/>
                                 <include reference="yfM-H7-2tQ"/>
                                 <include reference="fXn-Aw-jVj"/>
+                                <include reference="3QD-sn-qhu"/>
+                                <include reference="jm3-Y9-h66"/>
+                                <include reference="xjp-y7-KnI"/>
                             </mask>
                         </variation>
                     </view>
@@ -238,7 +275,7 @@
             </objects>
             <point key="canvasLocation" x="2395.5" y="131"/>
         </scene>
-        <!--Item 2-->
+        <!--Calculator-->
         <scene sceneID="nUV-fi-PIF">
             <objects>
                 <viewController id="lkv-cH-rgc" sceneMemberID="viewController">
@@ -251,7 +288,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="izr-9I-u7L"/>
+                    <tabBarItem key="tabBarItem" title="Calculator" id="izr-9I-u7L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qH6-wo-eaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,7 +310,7 @@
                                 <rect key="frame" x="8" y="43" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movementTableCell" rowHeight="50" id="VYY-xv-CXu" customClass="MovementTableCell" customModule="amatracker" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movementTableCell" rowHeight="50" id="VYY-xv-CXu" customClass="MovementTableCell" customModule="amatracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VYY-xv-CXu" id="cLA-BA-URQ">
@@ -341,11 +378,11 @@
             </objects>
             <point key="canvasLocation" x="-750" y="462"/>
         </scene>
-        <!--Item 1-->
+        <!--Movements-->
         <scene sceneID="6lO-b4-rqW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hrg-Xj-Kif" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="tPc-oJ-VSx"/>
+                    <tabBarItem key="tabBarItem" title="Movements" id="tPc-oJ-VSx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c7A-aR-D07">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

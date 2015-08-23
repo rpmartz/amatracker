@@ -19,8 +19,9 @@
 		947325551B80670100F4B1FD /* MovementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325541B80670100F4B1FD /* MovementDetailViewController.swift */; };
 		947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325561B80704D00F4B1FD /* AddRecordViewController.swift */; };
 		947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */; };
-		9473255B1B80BF1A00F4B1FD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473255A1B80BF1A00F4B1FD /* Record.swift */; };
 		9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473255E1B80C4E400F4B1FD /* Movement.swift */; };
+		947325611B80CC6600F4B1FD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325601B80CC6600F4B1FD /* Record.swift */; };
+		947325641B80DA1000F4B1FD /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325631B80DA1000F4B1FD /* RecordService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,9 @@
 		947325541B80670100F4B1FD /* MovementDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementDetailViewController.swift; sourceTree = "<group>"; };
 		947325561B80704D00F4B1FD /* AddRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
 		947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementRecordTableCell.swift; sourceTree = "<group>"; };
-		9473255A1B80BF1A00F4B1FD /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
 		9473255E1B80C4E400F4B1FD /* Movement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movement.swift; path = ../Movement.swift; sourceTree = "<group>"; };
+		947325601B80CC6600F4B1FD /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
+		947325631B80DA1000F4B1FD /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		9473252A1B805C3C00F4B1FD /* amatracker */ = {
 			isa = PBXGroup;
 			children = (
+				947325621B80D9FE00F4B1FD /* Services */,
 				9473255D1B80C42C00F4B1FD /* Models */,
 				9473255C1B80C40B00F4B1FD /* Controllers */,
 				9473252D1B805C3C00F4B1FD /* AppDelegate.swift */,
@@ -146,10 +149,18 @@
 		9473255D1B80C42C00F4B1FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				947325601B80CC6600F4B1FD /* Record.swift */,
 				9473255E1B80C4E400F4B1FD /* Movement.swift */,
-				9473255A1B80BF1A00F4B1FD /* Record.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		947325621B80D9FE00F4B1FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				947325631B80DA1000F4B1FD /* RecordService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,11 +265,12 @@
 			files = (
 				947325551B80670100F4B1FD /* MovementDetailViewController.swift in Sources */,
 				947325331B805C3C00F4B1FD /* ViewController.swift in Sources */,
-				9473255B1B80BF1A00F4B1FD /* Record.swift in Sources */,
+				947325611B80CC6600F4B1FD /* Record.swift in Sources */,
 				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
 				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
 				947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */,
 				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
+				947325641B80DA1000F4B1FD /* RecordService.swift in Sources */,
 				947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */,
 				9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */,
 				9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */,
@@ -457,6 +469,7 @@
 				9473254C1B805C3D00F4B1FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9473254D1B805C3D00F4B1FD /* Build configuration list for PBXNativeTarget "amatrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +478,7 @@
 				9473254F1B805C3D00F4B1FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
