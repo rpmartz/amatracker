@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0rm-wE-EQR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Movement Detail View Controller-->
@@ -16,20 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PWF-uf-u2d">
+                                <rect key="frame" x="196" y="8" width="209" height="29"/>
+                                <segments>
+                                    <segment title="Sort By Date"/>
+                                    <segment title="Sort By Weight"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="95" y="113" width="210" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="segmentedControlPressed:" destination="vXZ-lx-hvc" eventType="valueChanged" id="XQr-Td-qS8"/>
+                                </connections>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tq-Bs-AxN">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="72" width="251" height="21"/>
+                                    <rect key="frame" x="75" y="74" width="251" height="21"/>
                                 </variation>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-kB-bd5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movementRecordCell" rowHeight="70" id="Lpn-ga-H55" customClass="MovementRecordTableCell" customModule="amatracker" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movementRecordCell" rowHeight="70" id="Lpn-ga-H55" customClass="MovementRecordTableCell" customModule="amatracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lpn-ga-H55" id="PJ1-RF-4Vf">
@@ -86,7 +100,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="101" width="400" height="510"/>
+                                    <rect key="frame" x="0.0" y="149" width="400" height="462"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="cvj-wp-V59"/>
@@ -97,12 +111,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="PWF-uf-u2d"/>
                                 <exclude reference="6Tq-Bs-AxN"/>
                                 <exclude reference="kGP-kB-bd5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="PWF-uf-u2d"/>
                                 <include reference="6Tq-Bs-AxN"/>
                                 <include reference="kGP-kB-bd5"/>
                             </mask>
@@ -111,17 +127,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nGD-CS-5wo">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="PWF-uf-u2d">
-                            <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Sort By Date"/>
-                                <segment title="Sort By Weight"/>
-                            </segments>
-                            <connections>
-                                <action selector="segmentedControlPressed:" destination="vXZ-lx-hvc" eventType="valueChanged" id="XQr-Td-qS8"/>
-                            </connections>
-                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ziv-GL-Ps4">
                             <connections>
                                 <action selector="addRecordButtonPressed:" destination="vXZ-lx-hvc" id="sPP-0y-LXY"/>
@@ -180,7 +185,7 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="28" y="21" width="56" height="30"/>
                                 </variation>
                                 <connections>
@@ -192,7 +197,7 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="301" y="21" width="67" height="30"/>
                                 </variation>
                                 <connections>
@@ -237,6 +242,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bE7-qw-3c8" firstAttribute="top" secondItem="2sO-Ud-n4q" secondAttribute="bottom" constant="1" id="Ghu-zb-5zd"/>
+                            <constraint firstItem="yfM-H7-2tQ" firstAttribute="top" secondItem="2sO-Ud-n4q" secondAttribute="bottom" constant="1" id="Isn-vq-r0S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yfM-H7-2tQ" secondAttribute="trailing" constant="16" id="QXj-r6-Fuy"/>
+                            <constraint firstItem="bE7-qw-3c8" firstAttribute="leading" secondItem="KJO-Vw-Cq5" secondAttribute="leadingMargin" constant="12" id="lGc-PO-tox"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="GWb-ju-6WX"/>
@@ -248,6 +259,12 @@
                                 <exclude reference="3QD-sn-qhu"/>
                                 <exclude reference="jm3-Y9-h66"/>
                                 <exclude reference="xjp-y7-KnI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Ghu-zb-5zd"/>
+                                <exclude reference="lGc-PO-tox"/>
+                                <exclude reference="Isn-vq-r0S"/>
+                                <exclude reference="QXj-r6-Fuy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -261,6 +278,12 @@
                                 <include reference="3QD-sn-qhu"/>
                                 <include reference="jm3-Y9-h66"/>
                                 <include reference="xjp-y7-KnI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Ghu-zb-5zd"/>
+                                <include reference="lGc-PO-tox"/>
+                                <include reference="Isn-vq-r0S"/>
+                                <include reference="QXj-r6-Fuy"/>
                             </mask>
                         </variation>
                     </view>
@@ -307,7 +330,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hJB-fF-YRZ">
-                                <rect key="frame" x="8" y="43" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="93" width="600" height="579"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movementTableCell" rowHeight="50" id="VYY-xv-CXu" customClass="MovementTableCell" customModule="amatracker" customModuleProvider="target">
@@ -318,7 +341,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z7-av-SFz">
                                                     <rect key="frame" x="33" y="26" width="126" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
@@ -332,18 +355,24 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="39" width="600" height="605"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="44" width="600" height="600"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="Xw6-7h-6f4" id="uzF-nY-l7i"/>
                                     <outlet property="delegate" destination="Xw6-7h-6f4" id="aJK-U8-pfz"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick an Exercise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="art-c5-Ta5">
-                                <rect key="frame" x="208" y="72" width="193" height="21"/>
+                                <rect key="frame" x="204" y="72" width="193" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="104" y="72" width="193" height="21"/>
+                                    <rect key="frame" x="137" y="72" width="127" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -357,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfE-qL-Oyh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="131"/>
+            <point key="canvasLocation" x="848" y="113"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="taS-4g-zWA">
