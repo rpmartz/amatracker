@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473252D1B805C3C00F4B1FD /* AppDelegate.swift */; };
 		947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */; };
-		947325331B805C3C00F4B1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* ViewController.swift */; };
+		947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* CalclatorViewController.swift */; };
 		947325361B805C3C00F4B1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947325341B805C3C00F4B1FD /* Main.storyboard */; };
 		947325381B805C3C00F4B1FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947325371B805C3C00F4B1FD /* Images.xcassets */; };
 		9473253B1B805C3C00F4B1FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947325391B805C3C00F4B1FD /* LaunchScreen.xib */; };
@@ -39,7 +39,7 @@
 		9473252C1B805C3C00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9473252D1B805C3C00F4B1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		947325301B805C3C00F4B1FD /* amatracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = amatracker.xcdatamodel; sourceTree = "<group>"; };
-		947325321B805C3C00F4B1FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		947325321B805C3C00F4B1FD /* CalclatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalclatorViewController.swift; sourceTree = "<group>"; };
 		947325351B805C3C00F4B1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		947325371B805C3C00F4B1FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9473253A1B805C3C00F4B1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				947325561B80704D00F4B1FD /* AddRecordViewController.swift */,
 				947325541B80670100F4B1FD /* MovementDetailViewController.swift */,
 				947325501B805EE800F4B1FD /* MovementListViewController.swift */,
-				947325321B805C3C00F4B1FD /* ViewController.swift */,
+				947325321B805C3C00F4B1FD /* CalclatorViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -266,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				947325551B80670100F4B1FD /* MovementDetailViewController.swift in Sources */,
-				947325331B805C3C00F4B1FD /* ViewController.swift in Sources */,
+				947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */,
 				947325611B80CC6600F4B1FD /* Record.swift in Sources */,
 				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
 				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
