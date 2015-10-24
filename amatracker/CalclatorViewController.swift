@@ -5,7 +5,9 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var weightTextField: UITextField!
     
     @IBAction func showPercentagesButtonPressed(sender: UIButton) {
-        let weight = NSString(string: weightTextField.text!).floatValue
+        
+        
+        self.performSegueWithIdentifier("showPercentagesSegue", sender: self)
         // segue to new controller
     }
     override func viewDidLoad() {
@@ -16,6 +18,16 @@ class CalculatorViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showPercentagesSegue" {
+            let destVC : PercentagesViewController = segue.destinationViewController as! PercentagesViewController
+            
+            let weight = NSString(string: weightTextField.text!).floatValue
+            destVC.oneRepMaxWeight = weight
+            
+        }
     }
 
 
