@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PercentagesViewController : UITableViewController {
+class PercentagesViewController : UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     var oneRepMaxWeight: Float = Float()
     let percentages : [Float] = [0.5, 0.55, 0.6, 0.65,
@@ -21,7 +21,7 @@ class PercentagesViewController : UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell: PercentageTableCell = tableView.dequeueReusableCellWithIdentifier("percentageCell") as! PercentageTableCell
         
@@ -35,7 +35,7 @@ class PercentagesViewController : UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return percentages.count
     }
     
