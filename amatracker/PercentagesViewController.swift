@@ -39,4 +39,9 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         return percentages.count
     }
     
+    @IBAction func closeButtonPressed(sender: UIButton) {
+        self.dismissViewControllerAnimated(false) { () -> Void in
+            
+        }
+    }
 }
