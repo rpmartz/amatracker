@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473252D1B805C3C00F4B1FD /* AppDelegate.swift */; };
 		947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */; };
-		947325331B805C3C00F4B1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* ViewController.swift */; };
+		947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* CalclatorViewController.swift */; };
 		947325361B805C3C00F4B1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947325341B805C3C00F4B1FD /* Main.storyboard */; };
 		947325381B805C3C00F4B1FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947325371B805C3C00F4B1FD /* Images.xcassets */; };
 		9473253B1B805C3C00F4B1FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947325391B805C3C00F4B1FD /* LaunchScreen.xib */; };
@@ -19,8 +19,9 @@
 		947325551B80670100F4B1FD /* MovementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325541B80670100F4B1FD /* MovementDetailViewController.swift */; };
 		947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325561B80704D00F4B1FD /* AddRecordViewController.swift */; };
 		947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */; };
-		9473255B1B80BF1A00F4B1FD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473255A1B80BF1A00F4B1FD /* Record.swift */; };
 		9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473255E1B80C4E400F4B1FD /* Movement.swift */; };
+		947325611B80CC6600F4B1FD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325601B80CC6600F4B1FD /* Record.swift */; };
+		947325641B80DA1000F4B1FD /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325631B80DA1000F4B1FD /* RecordService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		9473252C1B805C3C00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9473252D1B805C3C00F4B1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		947325301B805C3C00F4B1FD /* amatracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = amatracker.xcdatamodel; sourceTree = "<group>"; };
-		947325321B805C3C00F4B1FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		947325321B805C3C00F4B1FD /* CalclatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalclatorViewController.swift; sourceTree = "<group>"; };
 		947325351B805C3C00F4B1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		947325371B805C3C00F4B1FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9473253A1B805C3C00F4B1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,8 +51,9 @@
 		947325541B80670100F4B1FD /* MovementDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementDetailViewController.swift; sourceTree = "<group>"; };
 		947325561B80704D00F4B1FD /* AddRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
 		947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementRecordTableCell.swift; sourceTree = "<group>"; };
-		9473255A1B80BF1A00F4B1FD /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
 		9473255E1B80C4E400F4B1FD /* Movement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movement.swift; path = ../Movement.swift; sourceTree = "<group>"; };
+		947325601B80CC6600F4B1FD /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
+		947325631B80DA1000F4B1FD /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		9473252A1B805C3C00F4B1FD /* amatracker */ = {
 			isa = PBXGroup;
 			children = (
+				947325621B80D9FE00F4B1FD /* Services */,
 				9473255D1B80C42C00F4B1FD /* Models */,
 				9473255C1B80C40B00F4B1FD /* Controllers */,
 				9473252D1B805C3C00F4B1FD /* AppDelegate.swift */,
@@ -138,7 +141,7 @@
 				947325561B80704D00F4B1FD /* AddRecordViewController.swift */,
 				947325541B80670100F4B1FD /* MovementDetailViewController.swift */,
 				947325501B805EE800F4B1FD /* MovementListViewController.swift */,
-				947325321B805C3C00F4B1FD /* ViewController.swift */,
+				947325321B805C3C00F4B1FD /* CalclatorViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -146,10 +149,18 @@
 		9473255D1B80C42C00F4B1FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				947325601B80CC6600F4B1FD /* Record.swift */,
 				9473255E1B80C4E400F4B1FD /* Movement.swift */,
-				9473255A1B80BF1A00F4B1FD /* Record.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		947325621B80D9FE00F4B1FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				947325631B80DA1000F4B1FD /* RecordService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +207,9 @@
 		947325201B805C3C00F4B1FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = ryan;
 				TargetAttributes = {
 					947325271B805C3C00F4B1FD = {
@@ -209,7 +222,7 @@
 				};
 			};
 			buildConfigurationList = 947325231B805C3C00F4B1FD /* Build configuration list for PBXProject "amatracker" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -253,12 +266,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				947325551B80670100F4B1FD /* MovementDetailViewController.swift in Sources */,
-				947325331B805C3C00F4B1FD /* ViewController.swift in Sources */,
-				9473255B1B80BF1A00F4B1FD /* Record.swift in Sources */,
+				947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */,
+				947325611B80CC6600F4B1FD /* Record.swift in Sources */,
 				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
 				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
 				947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */,
 				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
+				947325641B80DA1000F4B1FD /* RecordService.swift in Sources */,
 				947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */,
 				9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */,
 				9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */,
@@ -324,6 +338,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -390,6 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = amatracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanpmartz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -400,6 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = amatracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanpmartz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -418,6 +435,7 @@
 				);
 				INFOPLIST_FILE = amatrackerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanpmartz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/amatracker.app/amatracker";
 			};
@@ -433,6 +451,7 @@
 				);
 				INFOPLIST_FILE = amatrackerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanpmartz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/amatracker.app/amatracker";
 			};
@@ -457,6 +476,7 @@
 				9473254C1B805C3D00F4B1FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9473254D1B805C3D00F4B1FD /* Build configuration list for PBXNativeTarget "amatrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +485,7 @@
 				9473254F1B805C3D00F4B1FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

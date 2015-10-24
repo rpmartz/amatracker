@@ -32,12 +32,22 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         let appDelegate : AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let context = appDelegate.managedObjectContext!
         
-        var error: NSError?
-        var movementArray = context.executeFetchRequest(request, error: &error)
+        var movementArray: [AnyObject]?
+        do {
+            movementArray = try context.executeFetchRequest(request)
+        } catch let error1 as NSError {
+           NSLog("\(error1)")
+            movementArray = nil
+        }
         
         if movementArray?.count == 0 {
             createMovements()
-            movementArray = context.executeFetchRequest(request, error: &error)
+            do {
+                movementArray = try context.executeFetchRequest(request)
+            } catch let error1 as NSError {
+                NSLog("\(error1)")
+                movementArray = nil
+            }
         }
         
         return movementArray as! [Movement]
@@ -84,7 +94,7 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let currentMovement = movements[indexPath.row]
-        var cell: MovementTableCell = tableView.dequeueReusableCellWithIdentifier(MOVEMENT_TABLE_CELL) as! MovementTableCell
+        let cell: MovementTableCell = tableView.dequeueReusableCellWithIdentifier(MOVEMENT_TABLE_CELL) as! MovementTableCell
         cell.movementNameLabel.text = currentMovement.name
         
         return cell
@@ -111,7 +121,7 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         if(segue.identifier == MOVEMENT_DETAIL_SEGUE) {
             let destinationViewController : MovementDetailViewController = segue.destinationViewController  as! MovementDetailViewController
             
-            let indexPathOfSelectedRow : NSIndexPath = self.movementTable.indexPathForSelectedRow()!
+            let indexPathOfSelectedRow : NSIndexPath = self.movementTable.indexPathForSelectedRow!
             let selectedMovement = movements[indexPathOfSelectedRow.row]
             destinationViewController.movement = selectedMovement
         }
