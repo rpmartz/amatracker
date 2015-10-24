@@ -32,12 +32,11 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         let appDelegate : AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let context = appDelegate.managedObjectContext!
         
-        var error: NSError?
         var movementArray: [AnyObject]?
         do {
             movementArray = try context.executeFetchRequest(request)
         } catch let error1 as NSError {
-            error = error1
+           NSLog("\(error1)")
             movementArray = nil
         }
         
@@ -46,7 +45,7 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
             do {
                 movementArray = try context.executeFetchRequest(request)
             } catch let error1 as NSError {
-                error = error1
+                NSLog("\(error1)")
                 movementArray = nil
             }
         }
