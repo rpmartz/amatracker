@@ -22,6 +22,7 @@
 		9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473255E1B80C4E400F4B1FD /* Movement.swift */; };
 		947325611B80CC6600F4B1FD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325601B80CC6600F4B1FD /* Record.swift */; };
 		947325641B80DA1000F4B1FD /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325631B80DA1000F4B1FD /* RecordService.swift */; };
+		94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08461BDB35D1005C1FCA /* MovementService.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		9473255E1B80C4E400F4B1FD /* Movement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movement.swift; path = ../Movement.swift; sourceTree = "<group>"; };
 		947325601B80CC6600F4B1FD /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
 		947325631B80DA1000F4B1FD /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
+		94BD08461BDB35D1005C1FCA /* MovementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				947325631B80DA1000F4B1FD /* RecordService.swift */,
+				94BD08461BDB35D1005C1FCA /* MovementService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */,
 				947325611B80CC6600F4B1FD /* Record.swift in Sources */,
 				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
+				94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */,
 				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
 				947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */,
 				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
