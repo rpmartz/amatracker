@@ -29,8 +29,8 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         let percentage : Int = Int(currentRowPercentage * oneRepMaxWeight)
        
         
-        cell.weightTextField.text = "\(percentage) kg"
-        cell.percentageTextField.text = "\(currentRowPercentage * 100.0)% of 1RM"
+        cell.weightTextLabel.text = "\(percentage) kg"
+        cell.percentageTextLabel.text = "\(currentRowPercentage * 100.0)% of 1RM"
         
         return cell
     }

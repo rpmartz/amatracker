@@ -11,7 +11,7 @@ import UIKit
 
 class PercentageTableCell : UITableViewCell {
     
-    @IBOutlet weak var percentageTextField: UILabel!
-    @IBOutlet weak var weightTextField: UILabel!
+    @IBOutlet weak var percentageTextLabel: UILabel!
+    @IBOutlet weak var weightTextLabel: UILabel!
     
 }
