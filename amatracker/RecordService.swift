@@ -20,9 +20,7 @@ class RecordService {
         request.predicate = movementPredicate
         
         let context = appDelegate.managedObjectContext!
-        
-        var error: NSError?
-        let fetchedRecords = context.executeFetchRequest(request, error: &error) as! [Record]
+        let fetchedRecords = (try! context.executeFetchRequest(request)) as! [Record]
         
         return fetchedRecords
         
@@ -32,7 +30,11 @@ class RecordService {
         let context = appDelegate.managedObjectContext!
         context.deleteObject(record)
         
-        var error: NSError?
-        context.save(&error)
+        
+        do {
+            try context.save()
+        } catch let error1 as NSError {
+            NSLog("\(error1)")
+        }
     }
 }

@@ -1,15 +1,9 @@
-//
-//  ViewController.swift
-//  amatracker
-//
-//  Created by ryan on 8/16/15.
-//  Copyright (c) 2015 ryan. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
 
+    @IBOutlet weak var weightTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

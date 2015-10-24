@@ -88,11 +88,11 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func segmentedControlPressed(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            records.sort(sortByDate)
+            records.sortInPlace(sortByDate)
             self.movementRecordTableView.reloadData()
            
         case 1:
-            records.sort(sortByWeight)
+            records.sortInPlace(sortByWeight)
             self.movementRecordTableView.reloadData()
             
         default:
@@ -101,7 +101,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func sortByWeight(rec1: Record, rec2: Record) -> Bool {
-        return rec1.weight as! Double > rec2.weight as! Double
+        return rec1.weight as Double > rec2.weight as Double
     }
     
     func sortByDate(rec1: Record, rec2: Record) -> Bool {
