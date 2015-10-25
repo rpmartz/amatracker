@@ -298,6 +298,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.43529411764705883" green="0.65098039215686276" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.43529411764705883" green="0.65098039215686276" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.43529411764705883" green="0.65098039215686276" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="hrg-Xj-Kif" kind="relationship" relationship="viewControllers" id="XKj-wq-9PY"/>
@@ -416,6 +424,6 @@
         <image name="weight-30x25.png" width="30" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="png-Lx-Ja8"/>
+        <segue reference="3rJ-hH-iHx"/>
     </inferredMetricsTieBreakers>
 </document>
