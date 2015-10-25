@@ -13,7 +13,6 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     let ADD_RECORD_SEGUE = "addRecordSegue"
     let SHOW_PERCENTAGES_SEGUE = "recordsToPercentagesSegue"
     
-    @IBOutlet weak var movementNameLabel: UILabel!
     @IBOutlet weak var movementRecordTableView: UITableView!
     
     var movement: Movement!
@@ -23,9 +22,6 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        movementNameLabel.text = movement.name
         loadRecords()
     }
     
@@ -37,6 +33,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     override func viewWillAppear(animated: Bool) {
         loadRecords()
         self.movementRecordTableView.reloadData()
+        self.navigationItem.title = movement.name
     }
 
     override func didReceiveMemoryWarning() {

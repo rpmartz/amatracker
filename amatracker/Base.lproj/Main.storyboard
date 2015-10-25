@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="PWF-uf-u2d">
-                                <rect key="frame" x="55" y="103" width="210" height="29"/>
+                                <rect key="frame" x="55" y="73" width="210" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Sort By Date"/>
@@ -24,17 +24,11 @@
                                     <action selector="segmentedControlPressed:" destination="vXZ-lx-hvc" eventType="valueChanged" id="XQr-Td-qS8"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Tq-Bs-AxN">
-                                <rect key="frame" x="35" y="74" width="251" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="kGP-kB-bd5">
-                                <rect key="frame" x="0.0" y="149" width="320" height="375"/>
+                                <rect key="frame" x="0.0" y="109" width="320" height="415"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movementRecordCell" rowHeight="70" id="Lpn-ga-H55" customClass="MovementRecordTableCell" customModule="amatracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="22" width="320" height="70"/>
@@ -83,7 +77,6 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nGD-CS-5wo">
-                        <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ziv-GL-Ps4">
                             <connections>
                                 <action selector="addRecordButtonPressed:" destination="vXZ-lx-hvc" id="sPP-0y-LXY"/>
@@ -92,7 +85,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="movementNameLabel" destination="6Tq-Bs-AxN" id="yhC-nO-b7O"/>
                         <outlet property="movementRecordTableView" destination="kGP-kB-bd5" id="7US-pr-RC3"/>
                         <segue destination="XE8-1V-vKC" kind="modal" identifier="addRecordSegue" id="cKN-sG-TZD"/>
                         <segue destination="TKN-YQ-cRV" kind="modal" identifier="recordsToPercentagesSegue" id="png-Lx-Ja8"/>
@@ -234,7 +226,7 @@
             </objects>
             <point key="canvasLocation" x="32" y="733"/>
         </scene>
-        <!--Movement List View Controller-->
+        <!--Movements-->
         <scene sceneID="P3n-nq-sUE">
             <objects>
                 <viewController id="Xw6-7h-6f4" customClass="MovementListViewController" customModule="amatracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -275,17 +267,10 @@
                                     <outlet property="delegate" destination="Xw6-7h-6f4" id="aJK-U8-pfz"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="art-c5-Ta5">
-                                <rect key="frame" x="97" y="69" width="127" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.81568627450980391" green="0.23529411764705882" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UkK-xD-X0p"/>
+                    <navigationItem key="navigationItem" title="Movements" id="UkK-xD-X0p"/>
                     <connections>
                         <outlet property="movementTable" destination="hJB-fF-YRZ" id="cDw-mi-VxM"/>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="movementDetailSegue" id="s2P-hI-cIy"/>
