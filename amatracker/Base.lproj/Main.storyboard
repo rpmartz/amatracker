@@ -221,7 +221,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calculator" id="izr-9I-u7L"/>
+                    <tabBarItem key="tabBarItem" title="Calculator" image="calc-25x25.png" id="izr-9I-u7L"/>
                     <connections>
                         <outlet property="weightTextField" destination="azb-ZH-B3y" id="C7n-P0-5Gm"/>
                         <segue destination="TKN-YQ-cRV" kind="modal" identifier="showPercentagesSegue" id="3rJ-hH-iHx"/>
@@ -313,7 +313,7 @@
         <scene sceneID="6lO-b4-rqW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hrg-Xj-Kif" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Movements" id="tPc-oJ-VSx"/>
+                    <tabBarItem key="tabBarItem" title="Movements" image="weight-30x25.png" id="tPc-oJ-VSx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c7A-aR-D07">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -349,7 +349,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SLo-Zm-WlF">
-                                                    <rect key="frame" x="23" y="14" width="84" height="21"/>
+                                                    <rect key="frame" x="23" y="14" width="121" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -393,10 +393,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="19m-wf-7Wf"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlw-4q-jUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="478" y="744"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calc-25x25.png" width="25" height="25"/>
+        <image name="weight-30x25.png" width="30" height="25"/>
+    </resources>
 </document>
