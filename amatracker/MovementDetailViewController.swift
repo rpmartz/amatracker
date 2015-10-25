@@ -10,6 +10,9 @@ import UIKit
 
 class MovementDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let ADD_RECORD_SEGUE = "addRecordSegue"
+    let SHOW_PERCENTAGES_SEGUE = "recordsToPercentagesSegue"
+    
     @IBOutlet weak var movementNameLabel: UILabel!
     @IBOutlet weak var movementRecordTableView: UITableView!
     
@@ -69,7 +72,14 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     
     
     @IBAction func addRecordButtonPressed(sender: AnyObject) {
-        performSegueWithIdentifier("addRecordSegue", sender: nil)
+        performSegueWithIdentifier(ADD_RECORD_SEGUE, sender: nil)
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let record = records[indexPath.row]
+        if(record.numberOfReps == 1) {
+            performSegueWithIdentifier(SHOW_PERCENTAGES_SEGUE, sender: nil)
+        }
     }
     
 
@@ -80,8 +90,18 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let destinationViewController: AddRecordViewController = segue.destinationViewController as! AddRecordViewController
-        destinationViewController.currentMovement = self.movement
+        
+        if segue.identifier == ADD_RECORD_SEGUE {
+            let destinationViewController: AddRecordViewController = segue.destinationViewController as! AddRecordViewController
+            destinationViewController.currentMovement = self.movement
+        }
+        else if segue.identifier == SHOW_PERCENTAGES_SEGUE {
+            let destinationViewController: PercentagesViewController = segue.destinationViewController as! PercentagesViewController
+            
+            let selectedRecord = records[movementRecordTableView.indexPathForSelectedRow!.row]
+            let selectedRecordWeight = selectedRecord.weight.floatValue
+            destinationViewController.oneRepMaxWeight = selectedRecordWeight
+        }
         
     }
     

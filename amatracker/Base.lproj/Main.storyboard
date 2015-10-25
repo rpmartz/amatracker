@@ -95,6 +95,7 @@
                         <outlet property="movementNameLabel" destination="6Tq-Bs-AxN" id="yhC-nO-b7O"/>
                         <outlet property="movementRecordTableView" destination="kGP-kB-bd5" id="7US-pr-RC3"/>
                         <segue destination="XE8-1V-vKC" kind="modal" identifier="addRecordSegue" id="cKN-sG-TZD"/>
+                        <segue destination="TKN-YQ-cRV" kind="modal" identifier="recordsToPercentagesSegue" id="png-Lx-Ja8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -404,11 +405,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlw-4q-jUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478" y="744"/>
+            <point key="canvasLocation" x="525" y="830"/>
         </scene>
     </scenes>
     <resources>
         <image name="calc-25x25.png" width="25" height="25"/>
         <image name="weight-30x25.png" width="30" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="png-Lx-Ja8"/>
+    </inferredMetricsTieBreakers>
 </document>
