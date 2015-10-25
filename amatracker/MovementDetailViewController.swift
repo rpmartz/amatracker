@@ -46,7 +46,15 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         
         let record = records[indexPath.row]
         let cell = self.movementRecordTableView.dequeueReusableCellWithIdentifier("movementRecordCell") as! MovementRecordTableCell
-        cell.recordLabel.text = "\(record.numberOfReps) Reps"
+        
+        var repDescription: String?
+        if record.numberOfReps == 1 {
+            repDescription = "Rep"
+        }
+        else {
+            repDescription = "Reps"
+        }
+        cell.recordLabel.text = "\(record.numberOfReps) \(repDescription!)"
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd-MMM-yyyy"
