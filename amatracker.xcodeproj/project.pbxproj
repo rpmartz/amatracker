@@ -28,6 +28,7 @@
 		94BD08541BDC9482005C1FCA /* calc-25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08531BDC9482005C1FCA /* calc-25x25.png */; settings = {ASSET_TAGS = (); }; };
 		94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08551BDC96C8005C1FCA /* weight-30x25.png */; settings = {ASSET_TAGS = (); }; };
 		94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */; settings = {ASSET_TAGS = (); }; };
+		94BD085A1BDC9950005C1FCA /* amatak-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08591BDC9950005C1FCA /* amatak-144.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		94BD08531BDC9482005C1FCA /* calc-25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calc-25x25.png"; sourceTree = "<group>"; };
 		94BD08551BDC96C8005C1FCA /* weight-30x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weight-30x25.png"; sourceTree = "<group>"; };
 		94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CF-Amatak-500.png"; sourceTree = "<group>"; };
+		94BD08591BDC9950005C1FCA /* amatak-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amatak-144.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		9473252B1B805C3C00F4B1FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94BD08591BDC9950005C1FCA /* amatak-144.png */,
 				94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */,
 				94BD08551BDC96C8005C1FCA /* weight-30x25.png */,
 				94BD08531BDC9482005C1FCA /* calc-25x25.png */,
@@ -274,6 +277,7 @@
 				947325361B805C3C00F4B1FD /* Main.storyboard in Resources */,
 				94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */,
 				9473253B1B805C3C00F4B1FD /* LaunchScreen.xib in Resources */,
+				94BD085A1BDC9950005C1FCA /* amatak-144.png in Resources */,
 				947325381B805C3C00F4B1FD /* Images.xcassets in Resources */,
 				94BD08541BDC9482005C1FCA /* calc-25x25.png in Resources */,
 				94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */,
