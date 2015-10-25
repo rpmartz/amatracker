@@ -25,11 +25,9 @@
 		94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08461BDB35D1005C1FCA /* MovementService.swift */; settings = {ASSET_TAGS = (); }; };
 		94BD08491BDB3DF3005C1FCA /* PercentagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */; settings = {ASSET_TAGS = (); }; };
-		94BD084E1BDC9374005C1FCA /* calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD084D1BDC9374005C1FCA /* calculator.png */; settings = {ASSET_TAGS = (); }; };
-		94BD08511BDC9450005C1FCA /* calculator-50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD084F1BDC9450005C1FCA /* calculator-50x50.png */; settings = {ASSET_TAGS = (); }; };
-		94BD08521BDC9450005C1FCA /* calc.svg in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08501BDC9450005C1FCA /* calc.svg */; settings = {ASSET_TAGS = (); }; };
 		94BD08541BDC9482005C1FCA /* calc-25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08531BDC9482005C1FCA /* calc-25x25.png */; settings = {ASSET_TAGS = (); }; };
 		94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08551BDC96C8005C1FCA /* weight-30x25.png */; settings = {ASSET_TAGS = (); }; };
+		94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,11 +63,9 @@
 		94BD08461BDB35D1005C1FCA /* MovementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementService.swift; sourceTree = "<group>"; };
 		94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentagesViewController.swift; sourceTree = "<group>"; };
 		94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentageTableCell.swift; sourceTree = "<group>"; };
-		94BD084D1BDC9374005C1FCA /* calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculator.png; sourceTree = "<group>"; };
-		94BD084F1BDC9450005C1FCA /* calculator-50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculator-50x50.png"; sourceTree = "<group>"; };
-		94BD08501BDC9450005C1FCA /* calc.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = calc.svg; sourceTree = "<group>"; };
 		94BD08531BDC9482005C1FCA /* calc-25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calc-25x25.png"; sourceTree = "<group>"; };
 		94BD08551BDC96C8005C1FCA /* weight-30x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weight-30x25.png"; sourceTree = "<group>"; };
+		94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CF-Amatak-500.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,11 +124,9 @@
 		9473252B1B805C3C00F4B1FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */,
 				94BD08551BDC96C8005C1FCA /* weight-30x25.png */,
 				94BD08531BDC9482005C1FCA /* calc-25x25.png */,
-				94BD084F1BDC9450005C1FCA /* calculator-50x50.png */,
-				94BD08501BDC9450005C1FCA /* calc.svg */,
-				94BD084D1BDC9374005C1FCA /* calculator.png */,
 				9473252C1B805C3C00F4B1FD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -278,13 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				947325361B805C3C00F4B1FD /* Main.storyboard in Resources */,
-				94BD08521BDC9450005C1FCA /* calc.svg in Resources */,
 				94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */,
-				94BD08511BDC9450005C1FCA /* calculator-50x50.png in Resources */,
 				9473253B1B805C3C00F4B1FD /* LaunchScreen.xib in Resources */,
 				947325381B805C3C00F4B1FD /* Images.xcassets in Resources */,
 				94BD08541BDC9482005C1FCA /* calc-25x25.png in Resources */,
-				94BD084E1BDC9374005C1FCA /* calculator.png in Resources */,
+				94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
