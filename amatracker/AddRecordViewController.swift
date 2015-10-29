@@ -9,52 +9,19 @@
 import UIKit
 import CoreData
 
-class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPickerViewDelegate {
-
-    @IBOutlet weak var weightPicker: UIPickerView!
+class AddRecordViewController: UIViewController {
+    
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var repsLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var weightTextField: UITextField!
     
     var currentMovement: Movement!
     var pickerData: [[NSString]]!
     
-    enum pickerComponent:Int{
-        case weights = 0
-        case fractions = 1
-        case units = 2
-    }
-    
-    func weightArray() -> [NSString] {
-        var weights: [NSString] = []
-        for num in 1...600 {
-            weights.append("\(num)")
-        }
-        
-        return weights
-    }
-    
-    func fractionalWeightArray() -> [NSString] {
-        return  [".0", ".25", ".5", ".75"]
-    }
-    
-    func unitsArray() -> [NSString] {
-        // TODO: make this an enum or class corresponding to a unit
-        return ["kg", "lbs"]
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerData = [
-            weightArray(),
-            fractionalWeightArray(),
-            unitsArray()
-        ]
-        
-        weightPicker.dataSource = self
-        weightPicker.delegate = self
-        weightPicker.setValue(UIColor.whiteColor(), forKey: "textColor")
         
         stepper.minimumValue = 1
         stepper.maximumValue = 100
@@ -89,8 +56,7 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
 
             let reps = Int(stepper.value)
         let recordDate = self.datePicker.date
-        let weightLifted = getSelectedWeight()
-        
+        let weightLifted = getEnteredWeight()
         
         let appDelegate : AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let managedObjectContext = appDelegate.managedObjectContext
@@ -111,18 +77,10 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    private func getSelectedWeight() -> NSNumber {
-        // TODO: has to be an easier way to do this
-        let selectedWeightRow = weightPicker.selectedRowInComponent(pickerComponent.weights.rawValue)
-        let selectedFractionRow = weightPicker.selectedRowInComponent(pickerComponent.fractions.rawValue)
-        
-        let weightValue = pickerData[pickerComponent.weights.rawValue][selectedWeightRow]
-        let fraction = pickerData[pickerComponent.fractions.rawValue][selectedFractionRow]
-        
-        let asString = NSString(string: "\(weightValue)\(fraction)")
-        
-        return asString.floatValue
+    private func getEnteredWeight() -> Float {
+        return (weightTextField.text! as NSString).floatValue
     }
+    
     /*
     // MARK: - Navigation
     
@@ -132,26 +90,6 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
     // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    // MARK: UIPickerViewDataSource required functions
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return pickerData.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData[component].count
-    }
-    
-    //MARK: UIPickerViewDelegate optional functions
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(pickerData[component][row])"
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        NSLog("selected row. Row:  [\(row)]. Component: [\(component)]")
-    }
-    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
