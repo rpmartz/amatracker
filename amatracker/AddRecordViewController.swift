@@ -54,6 +54,7 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
         
         weightPicker.dataSource = self
         weightPicker.delegate = self
+        weightPicker.setValue(UIColor.whiteColor(), forKey: "textColor")
         
         stepper.minimumValue = 1
         stepper.maximumValue = 100
@@ -63,6 +64,7 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
         
         repsLabel.text = Int(stepper.value).description
         datePicker.datePickerMode = UIDatePickerMode.Date
+        datePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
         
         
         // Do any additional setup after loading the view.
@@ -149,5 +151,11 @@ class AddRecordViewController: UIViewController,  UIPickerViewDataSource, UIPick
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //        NSLog("selected row. Row:  [\(row)]. Component: [\(component)]")
     }
+    
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
 
 }

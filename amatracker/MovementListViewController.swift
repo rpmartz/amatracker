@@ -22,6 +22,7 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
 
         movements = movementService.fetchMovements()
     }
@@ -70,6 +71,11 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         }
         
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+
     
 }
 

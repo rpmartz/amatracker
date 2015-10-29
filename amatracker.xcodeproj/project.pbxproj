@@ -22,13 +22,13 @@
 		9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473255E1B80C4E400F4B1FD /* Movement.swift */; };
 		947325611B80CC6600F4B1FD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325601B80CC6600F4B1FD /* Record.swift */; };
 		947325641B80DA1000F4B1FD /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325631B80DA1000F4B1FD /* RecordService.swift */; };
-		94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08461BDB35D1005C1FCA /* MovementService.swift */; settings = {ASSET_TAGS = (); }; };
-		94BD08491BDB3DF3005C1FCA /* PercentagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */; settings = {ASSET_TAGS = (); }; };
-		94BD08541BDC9482005C1FCA /* calc-25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08531BDC9482005C1FCA /* calc-25x25.png */; settings = {ASSET_TAGS = (); }; };
-		94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08551BDC96C8005C1FCA /* weight-30x25.png */; settings = {ASSET_TAGS = (); }; };
-		94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */; settings = {ASSET_TAGS = (); }; };
-		94BD085A1BDC9950005C1FCA /* amatak-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08591BDC9950005C1FCA /* amatak-144.png */; settings = {ASSET_TAGS = (); }; };
+		94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08461BDB35D1005C1FCA /* MovementService.swift */; };
+		94BD08491BDB3DF3005C1FCA /* PercentagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */; };
+		94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */; };
+		94BD08541BDC9482005C1FCA /* calc-25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08531BDC9482005C1FCA /* calc-25x25.png */; };
+		94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08551BDC96C8005C1FCA /* weight-30x25.png */; };
+		94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */; };
+		94BD085A1BDC9950005C1FCA /* amatak-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08591BDC9950005C1FCA /* amatak-144.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +243,7 @@
 				TargetAttributes = {
 					947325271B805C3C00F4B1FD = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5TFH5WCLUL;
 					};
 					9473253F1B805C3D00F4B1FD = {
 						CreatedOnToolsVersion = 6.4;
@@ -439,10 +440,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = amatracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanpmartz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -450,10 +454,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = amatracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanpmartz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
