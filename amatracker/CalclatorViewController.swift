@@ -29,7 +29,10 @@ class CalculatorViewController: UIViewController {
             
         }
     }
-
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
 }
 

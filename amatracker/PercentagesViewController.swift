@@ -39,6 +39,11 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         return percentages.count
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+
+    
     @IBAction func closeButtonPressed(sender: UIButton) {
         self.dismissViewControllerAnimated(false) { () -> Void in
             
