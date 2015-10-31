@@ -30,8 +30,11 @@ class AddRecordViewController: UIViewController {
         stepper.value = 1
         
         repsLabel.text = Int(stepper.value).description
+        
         datePicker.datePickerMode = UIDatePickerMode.Date
         datePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
+        datePicker.performSelector("setHighlightsToday:", withObject:UIColor.whiteColor())
+        
         
         
         // Do any additional setup after loading the view.
