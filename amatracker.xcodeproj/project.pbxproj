@@ -39,6 +39,13 @@
 			remoteGlobalIDString = 947325271B805C3C00F4B1FD;
 			remoteInfo = amatracker;
 		};
+		94D9EFA31BE483E5006DE7E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947325201B805C3C00F4B1FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 947325271B805C3C00F4B1FD;
+			remoteInfo = amatracker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +75,7 @@
 		94BD08551BDC96C8005C1FCA /* weight-30x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weight-30x25.png"; sourceTree = "<group>"; };
 		94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CF-Amatak-500.png"; sourceTree = "<group>"; };
 		94BD08591BDC9950005C1FCA /* amatak-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amatak-144.png"; sourceTree = "<group>"; };
+		94D9EF9E1BE483E5006DE7E5 /* amatrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = amatrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9473253D1B805C3D00F4B1FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D9EF9B1BE483E5006DE7E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -102,6 +117,7 @@
 			children = (
 				947325281B805C3C00F4B1FD /* amatracker.app */,
 				947325401B805C3D00F4B1FD /* amatrackerTests.xctest */,
+				94D9EF9E1BE483E5006DE7E5 /* amatrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +246,24 @@
 			productReference = 947325401B805C3D00F4B1FD /* amatrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		94D9EF9D1BE483E5006DE7E5 /* amatrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94D9EFA71BE483E5006DE7E5 /* Build configuration list for PBXNativeTarget "amatrackerUITests" */;
+			buildPhases = (
+				94D9EF9A1BE483E5006DE7E5 /* Sources */,
+				94D9EF9B1BE483E5006DE7E5 /* Frameworks */,
+				94D9EF9C1BE483E5006DE7E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94D9EFA41BE483E5006DE7E5 /* PBXTargetDependency */,
+			);
+			name = amatrackerUITests;
+			productName = amatrackerUITests;
+			productReference = 94D9EF9E1BE483E5006DE7E5 /* amatrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,7 +271,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = ryan;
 				TargetAttributes = {
@@ -247,6 +281,11 @@
 					};
 					9473253F1B805C3D00F4B1FD = {
 						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 947325271B805C3C00F4B1FD;
+					};
+					94D9EF9D1BE483E5006DE7E5 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 5TFH5WCLUL;
 						TestTargetID = 947325271B805C3C00F4B1FD;
 					};
 				};
@@ -266,6 +305,7 @@
 			targets = (
 				947325271B805C3C00F4B1FD /* amatracker */,
 				9473253F1B805C3D00F4B1FD /* amatrackerTests */,
+				94D9EF9D1BE483E5006DE7E5 /* amatrackerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,6 +326,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9473253E1B805C3D00F4B1FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D9EF9C1BE483E5006DE7E5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,6 +371,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94D9EF9A1BE483E5006DE7E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -331,6 +385,11 @@
 			isa = PBXTargetDependency;
 			target = 947325271B805C3C00F4B1FD /* amatracker */;
 			targetProxy = 947325411B805C3D00F4B1FD /* PBXContainerItemProxy */;
+		};
+		94D9EFA41BE483E5006DE7E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 947325271B805C3C00F4B1FD /* amatracker */;
+			targetProxy = 94D9EFA31BE483E5006DE7E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -443,6 +502,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = amatracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanpmartz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,6 +517,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = amatracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanpmartz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +561,33 @@
 			};
 			name = Release;
 		};
+		94D9EFA51BE483E5006DE7E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = amatrackerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanpmartz.amatrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = amatracker;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		94D9EFA61BE483E5006DE7E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = amatrackerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanpmartz.amatrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = amatracker;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -529,6 +617,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		94D9EFA71BE483E5006DE7E5 /* Build configuration list for PBXNativeTarget "amatrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D9EFA51BE483E5006DE7E5 /* Debug */,
+				94D9EFA61BE483E5006DE7E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
