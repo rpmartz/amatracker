@@ -12,8 +12,6 @@ class CalculatorViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        // Do any additional setup after loading the view.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
     }
@@ -24,7 +22,6 @@ class CalculatorViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -1,11 +1,3 @@
-//
-//  MovementListViewController.swift
-//  amatracker
-//
-//  Created by ryan on 8/16/15.
-//  Copyright (c) 2015 ryan. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
@@ -30,7 +22,6 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: UITableViewDataSource functions
@@ -53,15 +44,10 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         performSegueWithIdentifier(MOVEMENT_DETAIL_SEGUE, sender: self)
     }
 
-    
-
-   
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
         if(segue.identifier == MOVEMENT_DETAIL_SEGUE) {
             let destinationViewController : MovementDetailViewController = segue.destinationViewController  as! MovementDetailViewController
             
@@ -76,6 +62,5 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         return UIStatusBarStyle.LightContent
     }
 
-    
 }
 

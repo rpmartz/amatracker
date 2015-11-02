@@ -1,11 +1,3 @@
-//
-//  MovementDetailViewController.swift
-//  amatracker
-//
-//  Created by ryan on 8/16/15.
-//  Copyright (c) 2015 ryan. All rights reserved.
-//
-
 import UIKit
 
 class MovementDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -38,7 +30,6 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: UITableViewDataSource functions
@@ -90,11 +81,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
 
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         
         if segue.identifier == ADD_RECORD_SEGUE {
             let destinationViewController: AddRecordViewController = segue.destinationViewController as! AddRecordViewController

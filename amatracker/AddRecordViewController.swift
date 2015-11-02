@@ -1,11 +1,3 @@
-//
-//  AddRecordViewController.swift
-//  amatracker
-//
-//  Created by ryan on 8/16/15.
-//  Copyright (c) 2015 ryan. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
@@ -35,9 +27,7 @@ class AddRecordViewController: UIViewController {
         datePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
         datePicker.performSelector("setHighlightsToday:", withObject:UIColor.whiteColor())
         
-        
-        
-        // Do any additional setup after loading the view.
+        // when user touches outside keyboard, keyboard should go away
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
 
@@ -46,14 +36,11 @@ class AddRecordViewController: UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    
     @IBAction func stepperPressed(sender: UIStepper) {
          repsLabel.text = Int(sender.value).description
     }
@@ -64,7 +51,7 @@ class AddRecordViewController: UIViewController {
     
     @IBAction func saveButtonPressed(sender: UIButton) {
 
-            let reps = Int(stepper.value)
+        let reps = Int(stepper.value)
         let recordDate = self.datePicker.date
         let weightLifted = getEnteredWeight()
         
@@ -81,9 +68,6 @@ class AddRecordViewController: UIViewController {
         
         appDelegate.saveContext()
         
-//        let recordListViewController = self.parentViewController as! MovementDetailViewController
-//        recordListViewController.loadRecords()
-        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -91,19 +75,8 @@ class AddRecordViewController: UIViewController {
         return (weightTextField.text! as NSString).floatValue
     }
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
-
 }
