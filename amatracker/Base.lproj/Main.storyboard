@@ -144,7 +144,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="W7c-5e-rWb">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="W7c-5e-rWb">
                                 <rect key="frame" x="0.0" y="262" width="320" height="48"/>
                                 <animations/>
                                 <color key="tintColor" red="0.43529411764705883" green="0.65098039215686276" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
@@ -246,7 +246,7 @@
                             <constraint firstItem="xjp-y7-KnI" firstAttribute="leading" secondItem="KJO-Vw-Cq5" secondAttribute="leadingMargin" constant="34" id="WJ8-uJ-C8p"/>
                             <constraint firstItem="GWb-ju-6WX" firstAttribute="leading" secondItem="KJO-Vw-Cq5" secondAttribute="leadingMargin" constant="4" id="a4p-Nu-ER3"/>
                             <constraint firstItem="3QD-sn-qhu" firstAttribute="leading" secondItem="KJO-Vw-Cq5" secondAttribute="leadingMargin" constant="6" id="c0d-B6-UQP"/>
-                            <constraint firstItem="ifQ-VT-f9h" firstAttribute="top" secondItem="W7c-5e-rWb" secondAttribute="bottom" constant="258" id="gAR-Z0-0nR"/>
+                            <constraint firstItem="W7c-5e-rWb" firstAttribute="top" secondItem="GWb-ju-6WX" secondAttribute="bottom" constant="21" id="hl6-Md-eae"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yfM-H7-2tQ" secondAttribute="trailing" constant="12" id="jEe-5v-KNb"/>
                             <constraint firstItem="W7c-5e-rWb" firstAttribute="centerX" secondItem="LLZ-Id-nKo" secondAttribute="centerX" id="kNg-dP-frv"/>
                             <constraint firstItem="GWb-ju-6WX" firstAttribute="top" secondItem="KJO-Vw-Cq5" secondAttribute="top" constant="220" id="vIP-tI-LP2"/>
