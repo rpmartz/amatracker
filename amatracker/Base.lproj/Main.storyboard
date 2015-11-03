@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-kB-bd5">
-                                <rect key="frame" x="0.0" y="109" width="320" height="415"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,13 +103,13 @@
                         <animations/>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="PWF-uf-u2d" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="39" id="4jg-yi-41Q"/>
-                            <constraint firstItem="PWF-uf-u2d" firstAttribute="top" secondItem="mFW-Ok-oc8" secondAttribute="bottom" constant="9" id="AwT-7F-jm4"/>
-                            <constraint firstItem="kGP-kB-bd5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cr6-Go-f7H"/>
-                            <constraint firstAttribute="trailing" secondItem="kGP-kB-bd5" secondAttribute="trailing" id="ghw-lt-eke"/>
-                            <constraint firstItem="kGP-kB-bd5" firstAttribute="bottom" secondItem="Hd0-Z5-gxz" secondAttribute="top" id="hfJ-G6-QnG"/>
-                            <constraint firstItem="PWF-uf-u2d" firstAttribute="centerX" secondItem="kGP-kB-bd5" secondAttribute="centerX" id="pua-Pa-yTH"/>
-                            <constraint firstItem="kGP-kB-bd5" firstAttribute="top" secondItem="PWF-uf-u2d" secondAttribute="bottom" constant="8" symbolic="YES" id="sX0-Ay-FWo"/>
+                            <constraint firstItem="PWF-uf-u2d" firstAttribute="top" secondItem="mFW-Ok-oc8" secondAttribute="bottom" constant="9" id="21E-jI-0gU"/>
+                            <constraint firstItem="kGP-kB-bd5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="2ee-2v-PnN"/>
+                            <constraint firstItem="PWF-uf-u2d" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="39" id="6aA-8M-UIs"/>
+                            <constraint firstItem="kGP-kB-bd5" firstAttribute="bottom" secondItem="Hd0-Z5-gxz" secondAttribute="top" id="8aH-RN-vxo"/>
+                            <constraint firstItem="kGP-kB-bd5" firstAttribute="centerX" secondItem="PWF-uf-u2d" secondAttribute="centerX" id="S4S-Ug-A1v"/>
+                            <constraint firstAttribute="trailing" secondItem="kGP-kB-bd5" secondAttribute="trailing" id="tga-JL-vFe"/>
+                            <constraint firstItem="kGP-kB-bd5" firstAttribute="top" secondItem="mFW-Ok-oc8" secondAttribute="bottom" id="yEe-3x-IbV"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -564,6 +564,6 @@
         <image name="weight-30x25.png" width="30" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3rJ-hH-iHx"/>
+        <segue reference="png-Lx-Ja8"/>
     </inferredMetricsTieBreakers>
 </document>
