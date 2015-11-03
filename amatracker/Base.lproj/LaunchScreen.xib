@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,70 +11,29 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CF-Amatak-500.png" translatesAutoresizingMaskIntoConstraints="NO" id="PC2-E5-RHI">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amatak-144.png" translatesAutoresizingMaskIntoConstraints="NO" id="PC2-E5-RHI">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="336" id="8Wd-Us-myN">
-                            <variation key="heightClass=regular-widthClass=compact" constant="262"/>
-                        </constraint>
-                        <constraint firstAttribute="width" constant="316" id="Cxc-JU-SS3">
-                            <variation key="heightClass=regular-widthClass=compact" constant="252"/>
-                        </constraint>
+                        <constraint firstAttribute="width" secondItem="PC2-E5-RHI" secondAttribute="height" multiplier="1:1" id="iID-pc-0ST"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="8Wd-Us-myN"/>
-                            <exclude reference="Cxc-JU-SS3"/>
+                            <exclude reference="iID-pc-0ST"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
-                            <include reference="8Wd-Us-myN"/>
-                            <include reference="Cxc-JU-SS3"/>
+                            <include reference="iID-pc-0ST"/>
                         </mask>
                     </variation>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Amatracker" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <animations/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="43" id="gb3-18-CUt"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="gb3-18-CUt"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="40" y="411" width="400" height="43"/>
-                        <mask key="constraints">
-                            <include reference="gb3-18-CUt"/>
-                        </mask>
-                    </variation>
-                </label>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="PC2-E5-RHI" firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="7bj-wN-URm">
-                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                </constraint>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="N9J-Xh-UOZ">
-                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                </constraint>
-                <constraint firstAttribute="bottom" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="20" symbolic="YES" id="ben-7U-Gx4">
-                    <variation key="heightClass=regular-widthClass=compact" constant="33"/>
-                </constraint>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="PC2-E5-RHI" secondAttribute="bottom" constant="49" id="vuR-fH-WM0">
-                    <variation key="heightClass=regular-widthClass=compact" constant="102"/>
-                </constraint>
-                <constraint firstItem="PC2-E5-RHI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="27" id="yd7-ic-1Hm">
-                    <variation key="heightClass=regular-widthClass=compact" constant="47"/>
-                </constraint>
+                <constraint firstItem="PC2-E5-RHI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZQ6-u4-R1Y"/>
+                <constraint firstItem="PC2-E5-RHI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fyD-V8-Ra0"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -83,11 +42,8 @@
                     <exclude reference="PC2-E5-RHI"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="7bj-wN-URm"/>
-                    <exclude reference="yd7-ic-1Hm"/>
-                    <exclude reference="N9J-Xh-UOZ"/>
-                    <exclude reference="ben-7U-Gx4"/>
-                    <exclude reference="vuR-fH-WM0"/>
+                    <exclude reference="ZQ6-u4-R1Y"/>
+                    <exclude reference="fyD-V8-Ra0"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -95,17 +51,14 @@
                     <include reference="PC2-E5-RHI"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="7bj-wN-URm"/>
-                    <include reference="yd7-ic-1Hm"/>
-                    <include reference="N9J-Xh-UOZ"/>
-                    <include reference="ben-7U-Gx4"/>
-                    <include reference="vuR-fH-WM0"/>
+                    <include reference="ZQ6-u4-R1Y"/>
+                    <include reference="fyD-V8-Ra0"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="443" y="488.5"/>
         </view>
     </objects>
     <resources>
-        <image name="CF-Amatak-500.png" width="500" height="532"/>
+        <image name="amatak-144.png" width="144" height="144"/>
     </resources>
 </document>
