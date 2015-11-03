@@ -299,6 +299,8 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azb-ZH-B3y">
                                 <rect key="frame" x="112" y="73" width="97" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.78856819060000005" green="0.78856819060000005" blue="0.78856819060000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
@@ -564,6 +566,6 @@
         <image name="weight-30x25.png" width="30" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="png-Lx-Ja8"/>
+        <segue reference="3rJ-hH-iHx"/>
     </inferredMetricsTieBreakers>
 </document>
