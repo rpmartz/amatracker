@@ -625,6 +625,7 @@
 				94D9EFA61BE483E5006DE7E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
