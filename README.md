@@ -12,7 +12,7 @@ Amatracker is supported on iPhone 4 and above, and on iOS 8 and above.
 
 Amatracker is not trying to be a full-featured workout tracker. It's focused on tracking the barbell lifts. Users can select select their movements from a list of common movements:
 
-![Movement List](https://s3.amazonaws.com/ryan.martz/amatracker/movements.png)
+<img src="https://s3.amazonaws.com/ryan.martz/amatracker/movements.png"/>
 
 Selecting a movement from the movement list will retrieve a list of records for that user, as well as the ability to add a new record:
 
