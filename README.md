@@ -10,15 +10,11 @@ Amatracker is supported on iPhone 4 and above, and on iOS 8 and above.
 
 #### Lifting Records
 
-Amatracker is not trying to be a full-featured workout tracker. It's focused on tracking the barbell lifts. Users can select select their movements from a list of common movements:
-
-<img src="https://s3.amazonaws.com/ryan.martz/amatracker/movements.png"/>
-
-Selecting a movement from the movement list will retrieve a list of records for that user, as well as the ability to add a new record:
+Amatracker is not trying to be a full-featured workout tracker. It's focused on tracking the barbell lifts. Users can select select their movements from a list of common movements:![Movement List](https://s3.amazonaws.com/ryan.martz/amatracker/calculator.png) Selecting a movement from the movement list will retrieve a list of records for that user, as well as the ability to add a new record:
 
 ![Record List](https://s3.amazonaws.com/ryan.martz/amatracker/records.png)
 
-![Add Record](https://s3.amazonaws.com/ryan.martz/amatracker/add-record.png)
+![Add Record]()
 
 Tapping on a record that was a one rep effort will bring up a list of percentages based on that weight:
 
