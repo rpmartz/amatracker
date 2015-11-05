@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:amatracker.xcodeproj">
+      location = "self:/Users/ryan/code/ios/amatracker/amatracker.xcodeproj">
    </FileRef>
 </Workspace>
