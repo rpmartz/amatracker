@@ -7,9 +7,15 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
     let percentages : [Float] = [0.5, 0.55, 0.6, 0.65,
                                 0.7, 0.75, 0.8, 0.85,
                                 0.9, 0.95, 1.0]
+    let mixpanel = MixpanelService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        mixpanel.track("Percentages Table Viewed")
     }
     
     

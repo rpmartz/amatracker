@@ -4,16 +4,22 @@ class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var weightTextField: UITextField!
     
+    let mixpanel = MixpanelService()
+    
     @IBAction func showPercentagesButtonPressed(sender: UIButton) {
-        
-        
         self.performSegueWithIdentifier("showPercentagesSegue", sender: self)
         // segue to new controller
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        mixpanel.track("Calculator Scene Viewed")
     }
     
     func dismissKeyboard() {

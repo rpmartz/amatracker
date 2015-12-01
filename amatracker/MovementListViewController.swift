@@ -11,6 +11,8 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     
     var movements : [Movement] = []
     let movementService = MovementService()
+    let mixpanel = MixpanelService()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,10 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         movements = movementService.fetchMovements()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        mixpanel.track("Movement Table Viewed")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

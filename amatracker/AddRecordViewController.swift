@@ -10,7 +10,7 @@ class AddRecordViewController: UIViewController {
     
     var currentMovement: Movement!
     var pickerData: [[NSString]]!
-    
+    let mixpanel = MixpanelService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,11 @@ class AddRecordViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
 
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        mixpanel.track("Add Record Scene Viewed", properties: ["movement": currentMovement!.name])
     }
 
     func dismissKeyboard() {
