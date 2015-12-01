@@ -11,6 +11,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     var records: [Record] = []
     
     let recordService = RecordService()
+    let mixpanel = MixpanelService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         loadRecords()
         self.movementRecordTableView.reloadData()
         self.navigationItem.title = movement.name
+        
+        mixpanel.track("Add Record Scene Viewed", properties: ["movement": movement.name])
     }
 
     override func didReceiveMemoryWarning() {
