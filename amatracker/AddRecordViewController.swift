@@ -37,6 +37,7 @@ class AddRecordViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         mixpanel.track("Add Record Scene Viewed", properties: ["movement": currentMovement!.name])
+        self.weightTextField.becomeFirstResponder()
     }
 
     func dismissKeyboard() {
