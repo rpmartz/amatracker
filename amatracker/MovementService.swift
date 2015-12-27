@@ -34,7 +34,6 @@ class MovementService {
     }
     
     private func createMovements() {
-        NSLog("creating movements")
         let movementNames = [
             "Back Squat",
             "Front Squat",
