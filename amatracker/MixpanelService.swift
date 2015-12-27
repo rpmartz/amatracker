@@ -1,11 +1,3 @@
-//
-//  MixpanelService.swift
-//  amatracker
-//
-//  Created by ryan on 11/26/15.
-//  Copyright © 2015 ryan. All rights reserved.
-//
-
 import Foundation
 import Mixpanel
 
