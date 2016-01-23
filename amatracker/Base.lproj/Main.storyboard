@@ -501,8 +501,8 @@
                                 <color key="textColor" red="0.92549019607843142" green="0.44705882352941179" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oxu-vy-8fn">
-                                <rect key="frame" x="49" y="63" width="205" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oxu-vy-8fn">
+                                <rect key="frame" x="76" y="63" width="151" height="29"/>
                                 <segments>
                                     <segment title="Kilograms"/>
                                     <segment title="Pounds"/>
