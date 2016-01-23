@@ -30,7 +30,7 @@ class RecordService {
         }
     }
     
-    func createTestRecords() -> Void {
+    private func createTestRecords() -> Void {
         let req = NSFetchRequest(entityName: "Movement")
         
         let context = appDelegate.managedObjectContext!
