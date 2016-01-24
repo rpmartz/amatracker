@@ -4,16 +4,16 @@ import UIKit
 class PercentagesViewController : UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     let POUNDS_TO_KILOS_RATE : Float = 2.2
+    let mixpanel = MixpanelService()
     
     var oneRepMaxWeightInKgs: Float = Float()
-    let percentages : [Float] = [0.5, 0.55, 0.6, 0.65,
-                                0.7, 0.75, 0.8, 0.85,
-                                0.9, 0.95, 1.0]
-    let mixpanel = MixpanelService()
     
     @IBOutlet weak var percentagesTableView: UITableView!
     @IBOutlet weak var unitsControl: UISegmentedControl!
     
+    let percentages : [Float] = [0.5, 0.55, 0.6, 0.65,
+        0.7, 0.75, 0.8, 0.85,
+        0.9, 0.95, 1.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
