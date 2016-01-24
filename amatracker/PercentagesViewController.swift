@@ -18,6 +18,10 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if units == .Pounds {
+            self.unitsControl!.selectedSegmentIndex = 1
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
