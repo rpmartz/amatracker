@@ -95,7 +95,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
             
             let selectedRecord = records[movementRecordTableView.indexPathForSelectedRow!.row]
             let selectedRecordWeight = selectedRecord.weight.floatValue
-            destinationViewController.oneRepMaxWeight = selectedRecordWeight
+            destinationViewController.oneRepMaxWeightInKgs = selectedRecordWeight
         }
         
     }

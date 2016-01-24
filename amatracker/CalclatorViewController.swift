@@ -35,7 +35,7 @@ class CalculatorViewController: UIViewController {
             let destVC : PercentagesViewController = segue.destinationViewController as! PercentagesViewController
             
             let weight = NSString(string: weightTextField.text!).floatValue
-            destVC.oneRepMaxWeight = weight
+            destVC.oneRepMaxWeightInKgs = weight
             
         }
     }

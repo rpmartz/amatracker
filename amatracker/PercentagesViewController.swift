@@ -3,11 +3,17 @@ import UIKit
 
 class PercentagesViewController : UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
-    var oneRepMaxWeight: Float = Float()
+    let POUNDS_TO_KILOS_RATE : Float = 2.2
+    
+    var oneRepMaxWeightInKgs: Float = Float()
     let percentages : [Float] = [0.5, 0.55, 0.6, 0.65,
                                 0.7, 0.75, 0.8, 0.85,
                                 0.9, 0.95, 1.0]
     let mixpanel = MixpanelService()
+    
+    @IBOutlet weak var percentagesTableView: UITableView!
+    @IBOutlet weak var unitsControl: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +30,16 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         let cell: PercentageTableCell = tableView.dequeueReusableCellWithIdentifier("percentageCell") as! PercentageTableCell
         
         let currentRowPercentage = percentages[indexPath.row]
-        let percentage : Int = Int(currentRowPercentage * oneRepMaxWeight)
-       
         
-        cell.weightTextLabel.text = "\(percentage) kg"
+        if unitsControl.selectedSegmentIndex == 0 {
+            let percentage : Int = Int(currentRowPercentage * oneRepMaxWeightInKgs)
+            cell.weightTextLabel.text = "\(percentage) kg"
+        }
+        else {
+            let percentage : Int = Int(currentRowPercentage * oneRepMaxWeightInKgs * POUNDS_TO_KILOS_RATE)
+            cell.weightTextLabel.text = "\(percentage) lbs"
+        }
+      
         cell.percentageTextLabel.text = "\(currentRowPercentage * 100.0)% of 1RM"
         
         return cell
@@ -41,6 +53,9 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         return UIStatusBarStyle.LightContent
     }
 
+    @IBAction func unitsToggleChanged(sender: UISegmentedControl) {
+        self.percentagesTableView.reloadData()
+    }
     
     @IBAction func closeButtonPressed(sender: UIButton) {
         self.dismissViewControllerAnimated(false) { () -> Void in
