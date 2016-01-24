@@ -24,6 +24,7 @@
 		947325611B80CC6600F4B1FD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325601B80CC6600F4B1FD /* Record.swift */; };
 		947325641B80DA1000F4B1FD /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325631B80DA1000F4B1FD /* RecordService.swift */; };
 		9474C5001C07015900901D00 /* MixpanelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474C4FF1C07015900901D00 /* MixpanelService.swift */; };
+		9477E4D71C5508D300222D54 /* MeasurementUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9477E4D61C5508D300222D54 /* MeasurementUnit.swift */; };
 		94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08461BDB35D1005C1FCA /* MovementService.swift */; };
 		94BD08491BDB3DF3005C1FCA /* PercentagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */; };
 		94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */; };
@@ -73,6 +74,7 @@
 		947325631B80DA1000F4B1FD /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		9474C4FA1C06F1EB00901D00 /* amatracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "amatracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		9474C4FF1C07015900901D00 /* MixpanelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixpanelService.swift; sourceTree = "<group>"; };
+		9477E4D61C5508D300222D54 /* MeasurementUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementUnit.swift; sourceTree = "<group>"; };
 		94BD08461BDB35D1005C1FCA /* MovementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementService.swift; sourceTree = "<group>"; };
 		94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentagesViewController.swift; sourceTree = "<group>"; };
 		94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentageTableCell.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				947325601B80CC6600F4B1FD /* Record.swift */,
 				9473255E1B80C4E400F4B1FD /* Movement.swift */,
+				9477E4D61C5508D300222D54 /* MeasurementUnit.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				947325611B80CC6600F4B1FD /* Record.swift in Sources */,
 				94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */,
 				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
+				9477E4D71C5508D300222D54 /* MeasurementUnit.swift in Sources */,
 				94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */,
 				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
 				9474C5001C07015900901D00 /* MixpanelService.swift in Sources */,

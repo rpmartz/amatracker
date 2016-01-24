@@ -7,6 +7,7 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
     let mixpanel = MixpanelService()
     
     var oneRepMaxWeightInKgs: Float = Float()
+    var units : MeasurementUnit = .Kilograms
     
     @IBOutlet weak var percentagesTableView: UITableView!
     @IBOutlet weak var unitsControl: UISegmentedControl!
@@ -31,7 +32,7 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         
         let currentRowPercentage = percentages[indexPath.row]
         
-        if unitsControl.selectedSegmentIndex == 0 {
+        if units == MeasurementUnit.Kilograms {
             let percentage : Int = Int(currentRowPercentage * oneRepMaxWeightInKgs)
             cell.weightTextLabel.text = "\(percentage) kg"
         }
@@ -54,6 +55,12 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
     }
 
     @IBAction func unitsToggleChanged(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.units = .Kilograms
+        }
+        else {
+            self.units = .Pounds
+        }
         self.percentagesTableView.reloadData()
     }
     
