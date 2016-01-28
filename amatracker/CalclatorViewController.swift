@@ -3,6 +3,7 @@ import UIKit
 class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var unitsControl : UISegmentedControl!
     
     let mixpanel = MixpanelService()
     
@@ -35,7 +36,19 @@ class CalculatorViewController: UIViewController {
             let destVC : PercentagesViewController = segue.destinationViewController as! PercentagesViewController
             
             let weight = NSString(string: weightTextField.text!).floatValue
-            destVC.oneRepMaxWeight = weight
+            
+            
+            // outlets are nil right now, so set a property and then update it in view percentage's viewDidLoad()
+            if self.unitsControl!.selectedSegmentIndex == 0 {
+                destVC.units = .Kilograms
+                destVC.oneRepMaxWeightInKgs = weight
+            }
+            else {
+                destVC.units = .Pounds
+                
+                let divisor : Float = 2.2
+                destVC.oneRepMaxWeightInKgs = weight / divisor // convert to lbs
+            }
             
         }
     }

@@ -265,15 +265,6 @@
                                 <color key="textColor" red="0.43529411759999997" green="0.65098039220000004" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FT-we-zeR">
-                                <rect key="frame" x="79" y="147" width="162" height="30"/>
-                                <state key="normal" title="Show Percentages">
-                                    <color key="titleColor" red="0.43529411764705883" green="0.65098039215686276" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="showPercentagesButtonPressed:" destination="lkv-cH-rgc" eventType="touchUpInside" id="dPF-Ui-NFW"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azb-ZH-B3y">
                                 <rect key="frame" x="112" y="73" width="97" height="30"/>
                                 <color key="backgroundColor" red="0.78856819060000005" green="0.78856819060000005" blue="0.78856819060000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -281,21 +272,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FT-we-zeR">
+                                <rect key="frame" x="96" y="177" width="128" height="30"/>
+                                <state key="normal" title="Show Percentages">
+                                    <color key="titleColor" red="0.43529411764705883" green="0.65098039215686276" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPercentagesButtonPressed:" destination="lkv-cH-rgc" eventType="touchUpInside" id="dPF-Ui-NFW"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ava-iZ-lR2">
+                                <rect key="frame" x="85" y="122" width="151" height="29"/>
+                                <segments>
+                                    <segment title="Kilograms"/>
+                                    <segment title="Pounds"/>
+                                </segments>
+                                <color key="tintColor" red="0.43529411764705883" green="0.65098039215686276" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.13333333333333333" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="azb-ZH-B3y" firstAttribute="leading" secondItem="Mgj-Vo-2im" secondAttribute="trailing" constant="26" id="1lv-00-YuS"/>
-                            <constraint firstItem="azb-ZH-B3y" firstAttribute="centerX" secondItem="1FT-we-zeR" secondAttribute="centerX" id="Fd1-kt-sj5"/>
-                            <constraint firstItem="azb-ZH-B3y" firstAttribute="centerY" secondItem="Mgj-Vo-2im" secondAttribute="centerY" id="X47-MD-HMf"/>
-                            <constraint firstItem="Mgj-Vo-2im" firstAttribute="leading" secondItem="GNB-eB-vqK" secondAttribute="leadingMargin" constant="28" id="YOm-b1-CxV"/>
-                            <constraint firstItem="1FT-we-zeR" firstAttribute="leading" secondItem="GNB-eB-vqK" secondAttribute="leadingMargin" constant="63" id="nZS-Yi-VgI"/>
-                            <constraint firstItem="azb-ZH-B3y" firstAttribute="top" secondItem="TxW-mP-h3k" secondAttribute="bottom" constant="53" id="nl6-ro-AfK"/>
-                            <constraint firstItem="1FT-we-zeR" firstAttribute="top" secondItem="azb-ZH-B3y" secondAttribute="bottom" constant="44" id="rwP-m7-x3P"/>
-                            <constraint firstItem="1FT-we-zeR" firstAttribute="centerX" secondItem="GNB-eB-vqK" secondAttribute="centerX" id="ydQ-9R-E6D"/>
+                            <constraint firstItem="azb-ZH-B3y" firstAttribute="centerY" secondItem="Mgj-Vo-2im" secondAttribute="centerY" id="3dd-qs-Fs1"/>
+                            <constraint firstItem="Ava-iZ-lR2" firstAttribute="top" secondItem="azb-ZH-B3y" secondAttribute="bottom" constant="19" id="Iow-QL-JBY"/>
+                            <constraint firstItem="1FT-we-zeR" firstAttribute="top" secondItem="Ava-iZ-lR2" secondAttribute="bottom" constant="27" id="QSR-1I-ev3"/>
+                            <constraint firstItem="Ava-iZ-lR2" firstAttribute="centerX" secondItem="1FT-we-zeR" secondAttribute="centerX" id="W9c-xH-9Gm"/>
+                            <constraint firstItem="azb-ZH-B3y" firstAttribute="leading" secondItem="Mgj-Vo-2im" secondAttribute="trailing" constant="26" id="Xoe-FU-J2L"/>
+                            <constraint firstItem="azb-ZH-B3y" firstAttribute="centerX" secondItem="GNB-eB-vqK" secondAttribute="centerX" id="i0M-Jl-5yV"/>
+                            <constraint firstItem="Ava-iZ-lR2" firstAttribute="centerX" secondItem="azb-ZH-B3y" secondAttribute="centerX" id="k31-NK-w6r"/>
+                            <constraint firstItem="Mgj-Vo-2im" firstAttribute="leading" secondItem="GNB-eB-vqK" secondAttribute="leadingMargin" constant="28" id="qhY-rK-GhC"/>
+                            <constraint firstItem="azb-ZH-B3y" firstAttribute="top" secondItem="TxW-mP-h3k" secondAttribute="bottom" constant="53" id="sxq-KE-Fnf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calculator" image="calc-25x25.png" id="izr-9I-u7L"/>
                     <connections>
+                        <outlet property="unitsControl" destination="Ava-iZ-lR2" id="Mep-rj-JUK"/>
                         <outlet property="weightTextField" destination="azb-ZH-B3y" id="C7n-P0-5Gm"/>
                         <segue destination="TKN-YQ-cRV" kind="modal" identifier="showPercentagesSegue" id="3rJ-hH-iHx"/>
                     </connections>
@@ -436,7 +446,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H90-FL-Vke">
-                                <rect key="frame" x="0.0" y="47" width="320" height="521"/>
+                                <rect key="frame" x="0.0" y="90" width="320" height="482"/>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -501,21 +511,38 @@
                                 <color key="textColor" red="0.92549019607843142" green="0.44705882352941179" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oxu-vy-8fn">
+                                <rect key="frame" x="76" y="63" width="151" height="29"/>
+                                <segments>
+                                    <segment title="Kilograms"/>
+                                    <segment title="Pounds"/>
+                                </segments>
+                                <color key="tintColor" red="0.43529411764705883" green="0.65098039215686276" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="unitsToggleChanged:" destination="TKN-YQ-cRV" eventType="valueChanged" id="3kO-g7-mCd"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="H90-FL-Vke" secondAttribute="trailing" id="21N-kD-nri"/>
                             <constraint firstItem="H90-FL-Vke" firstAttribute="leading" secondItem="PpG-DL-9bS" secondAttribute="leading" id="2ga-xN-6Qf"/>
                             <constraint firstItem="3VL-uh-Iqa" firstAttribute="top" secondItem="y9U-5N-1Lv" secondAttribute="bottom" constant="1" id="5wA-Fz-Bhh"/>
+                            <constraint firstItem="oxu-vy-8fn" firstAttribute="top" secondItem="y9U-5N-1Lv" secondAttribute="bottom" constant="43" id="CLz-Py-az0"/>
                             <constraint firstItem="3VL-uh-Iqa" firstAttribute="leading" secondItem="5Aq-nM-xTm" secondAttribute="trailing" constant="59" id="Cxn-Ve-1oq"/>
                             <constraint firstItem="3VL-uh-Iqa" firstAttribute="baseline" secondItem="5Aq-nM-xTm" secondAttribute="baseline" id="I7D-HL-LUc"/>
-                            <constraint firstItem="H90-FL-Vke" firstAttribute="bottom" secondItem="0IM-8I-n0e" secondAttribute="top" id="kxQ-zC-3Qf"/>
+                            <constraint firstItem="oxu-vy-8fn" firstAttribute="centerX" secondItem="PpG-DL-9bS" secondAttribute="centerX" constant="-8.5" id="NN8-YV-ae9"/>
+                            <constraint firstItem="H90-FL-Vke" firstAttribute="top" secondItem="oxu-vy-8fn" secondAttribute="bottom" constant="-1" id="bhB-l4-JS0"/>
+                            <constraint firstItem="H90-FL-Vke" firstAttribute="bottom" secondItem="0IM-8I-n0e" secondAttribute="top" constant="4" id="kxQ-zC-3Qf"/>
                             <constraint firstItem="3VL-uh-Iqa" firstAttribute="centerX" secondItem="H90-FL-Vke" secondAttribute="centerX" id="lIu-hf-XGk"/>
-                            <constraint firstItem="H90-FL-Vke" firstAttribute="top" secondItem="3VL-uh-Iqa" secondAttribute="bottom" constant="5" id="mNy-5L-9ZP"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="percentagesTableView" destination="H90-FL-Vke" id="p9h-3h-FP8"/>
+                        <outlet property="unitsControl" destination="oxu-vy-8fn" id="6TG-rB-9Pw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlw-4q-jUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -527,6 +554,6 @@
         <image name="weight-30x25.png" width="30" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="png-Lx-Ja8"/>
+        <segue reference="3rJ-hH-iHx"/>
     </inferredMetricsTieBreakers>
 </document>
