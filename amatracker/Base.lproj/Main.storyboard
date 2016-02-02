@@ -403,6 +403,7 @@
                     <connections>
                         <segue destination="hrg-Xj-Kif" kind="relationship" relationship="viewControllers" id="XKj-wq-9PY"/>
                         <segue destination="lkv-cH-rgc" kind="relationship" relationship="viewControllers" id="Uns-hv-zqn"/>
+                        <segue destination="EuM-RP-Mvb" kind="relationship" relationship="viewControllers" id="csf-Bf-gkv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dk-JZ-tEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,6 +433,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hya-1e-sVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="37.333333333333336" y="124.01333333333334"/>
+        </scene>
+        <!--More Options View Controller-->
+        <scene sceneID="fom-RL-rHP">
+            <objects>
+                <viewController id="EuM-RP-Mvb" customClass="MoreOptionsViewController" customModule="amatracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sh4-50-I66"/>
+                        <viewControllerLayoutGuide type="bottom" id="myI-Ac-AX0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aPW-35-Njc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MLa-RZ-FV8">
+                                <rect key="frame" x="0.0" y="49" width="320" height="470"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="exportTableCell" id="D9g-fe-SIS" customClass="ExportOptionTableCell" customModule="amatracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D9g-fe-SIS" id="YGl-1h-wwZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgN-Tb-cXr">
+                                                    <rect key="frame" x="59" y="11" width="146" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="146" id="KVr-ED-okj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.43529411764705883" green="0.65098039215686276" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="OgN-Tb-cXr" firstAttribute="top" secondItem="YGl-1h-wwZ" secondAttribute="topMargin" constant="3" id="76P-nl-Um3"/>
+                                                <constraint firstItem="OgN-Tb-cXr" firstAttribute="leading" secondItem="YGl-1h-wwZ" secondAttribute="leadingMargin" constant="51" id="YLn-MM-lSm"/>
+                                                <constraint firstItem="OgN-Tb-cXr" firstAttribute="centerY" secondItem="YGl-1h-wwZ" secondAttribute="centerY" id="mmW-HW-WA4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellTitle" destination="OgN-Tb-cXr" id="k2m-li-6e5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EuM-RP-Mvb" id="yj2-kc-Nws"/>
+                                    <outlet property="delegate" destination="EuM-RP-Mvb" id="fGS-3p-few"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MLa-RZ-FV8" firstAttribute="bottom" secondItem="myI-Ac-AX0" secondAttribute="top" id="4my-dg-oJc"/>
+                            <constraint firstAttribute="trailing" secondItem="MLa-RZ-FV8" secondAttribute="trailing" id="Hnw-7u-UOP"/>
+                            <constraint firstItem="MLa-RZ-FV8" firstAttribute="centerY" secondItem="aPW-35-Njc" secondAttribute="centerY" id="hVz-5d-ZwF"/>
+                            <constraint firstItem="MLa-RZ-FV8" firstAttribute="leading" secondItem="aPW-35-Njc" secondAttribute="leading" id="sRc-ax-vO3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="sEs-jX-f50"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaq-ed-Yvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="1210"/>
         </scene>
         <!--Percentages View Controller-->
         <scene sceneID="FPF-W7-pC3">

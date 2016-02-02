@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CC6E6E9063B513B53BDF2D6 /* Pods_amatracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76564C2C8EA3644B757EF8F1 /* Pods_amatracker.framework */; };
+		946A67801C5EF0C40075562F /* MoreOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A677F1C5EF0C40075562F /* MoreOptionsViewController.swift */; };
 		9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473252D1B805C3C00F4B1FD /* AppDelegate.swift */; };
 		947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */; };
 		947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* CalclatorViewController.swift */; };
@@ -32,6 +33,7 @@
 		94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08551BDC96C8005C1FCA /* weight-30x25.png */; };
 		94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */; };
 		94BD085A1BDC9950005C1FCA /* amatak-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08591BDC9950005C1FCA /* amatak-144.png */; };
+		94FD1EB31C5F84E100ACEDFD /* ExportOptionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FD1EB21C5F84E100ACEDFD /* ExportOptionTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		76564C2C8EA3644B757EF8F1 /* Pods_amatracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amatracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		946A677F1C5EF0C40075562F /* MoreOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewController.swift; sourceTree = "<group>"; };
 		947325281B805C3C00F4B1FD /* amatracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amatracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9473252C1B805C3C00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9473252D1B805C3C00F4B1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CF-Amatak-500.png"; sourceTree = "<group>"; };
 		94BD08591BDC9950005C1FCA /* amatak-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amatak-144.png"; sourceTree = "<group>"; };
 		94D9EF9E1BE483E5006DE7E5 /* amatrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = amatrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94FD1EB21C5F84E100ACEDFD /* ExportOptionTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportOptionTableCell.swift; sourceTree = "<group>"; };
 		DC8DD5818FD730D550BD022D /* Pods-amatracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-amatracker/Pods-amatracker.release.xcconfig"; sourceTree = "<group>"; };
 		F7C2EBA2265C654E54288AD3 /* Pods-amatracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amatracker/Pods-amatracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +210,7 @@
 				947325501B805EE800F4B1FD /* MovementListViewController.swift */,
 				947325321B805C3C00F4B1FD /* CalclatorViewController.swift */,
 				94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */,
+				946A677F1C5EF0C40075562F /* MoreOptionsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				947325521B8060CE00F4B1FD /* MovementTableCell.swift */,
 				947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */,
 				94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */,
+				94FD1EB21C5F84E100ACEDFD /* ExportOptionTableCell.swift */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				947325611B80CC6600F4B1FD /* Record.swift in Sources */,
 				94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */,
 				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
+				946A67801C5EF0C40075562F /* MoreOptionsViewController.swift in Sources */,
 				9477E4D71C5508D300222D54 /* MeasurementUnit.swift in Sources */,
 				94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */,
 				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
@@ -443,6 +450,7 @@
 				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
 				947325641B80DA1000F4B1FD /* RecordService.swift in Sources */,
 				947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */,
+				94FD1EB31C5F84E100ACEDFD /* ExportOptionTableCell.swift in Sources */,
 				9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */,
 				9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */,
 			);
