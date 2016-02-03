@@ -31,6 +31,10 @@ class MoreOptionsViewController: UIViewController {
 
 extension MoreOptionsViewController : UITableViewDataSource {
     
+    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exportOptions.count
     }
