@@ -25,11 +25,10 @@ class AddRecordViewController: UIViewController {
         
         datePicker.datePickerMode = UIDatePickerMode.Date
         datePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
-        datePicker.performSelector("setHighlightsToday:", withObject:UIColor.whiteColor())
         datePicker.maximumDate = NSDate()
         
         // when user touches outside keyboard, keyboard should go away
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddRecordViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
 
     }
