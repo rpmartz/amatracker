@@ -16,18 +16,16 @@
 		9473253B1B805C3C00F4B1FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947325391B805C3C00F4B1FD /* LaunchScreen.xib */; };
 		947325471B805C3D00F4B1FD /* amatrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325461B805C3D00F4B1FD /* amatrackerTests.swift */; };
 		947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325501B805EE800F4B1FD /* MovementListViewController.swift */; };
-		947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325521B8060CE00F4B1FD /* MovementTableCell.swift */; };
 		947325551B80670100F4B1FD /* MovementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325541B80670100F4B1FD /* MovementDetailViewController.swift */; };
 		947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325561B80704D00F4B1FD /* AddRecordViewController.swift */; };
-		947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */; };
 		9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473255E1B80C4E400F4B1FD /* Movement.swift */; };
 		947325611B80CC6600F4B1FD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325601B80CC6600F4B1FD /* Record.swift */; };
 		947325641B80DA1000F4B1FD /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325631B80DA1000F4B1FD /* RecordService.swift */; };
 		9474C5001C07015900901D00 /* MixpanelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474C4FF1C07015900901D00 /* MixpanelService.swift */; };
 		9477E4D71C5508D300222D54 /* MeasurementUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9477E4D61C5508D300222D54 /* MeasurementUnit.swift */; };
+		94BA6D331D0A23CB00F57D15 /* TableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA6D321D0A23CB00F57D15 /* TableCells.swift */; };
 		94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08461BDB35D1005C1FCA /* MovementService.swift */; };
 		94BD08491BDB3DF3005C1FCA /* PercentagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */; };
-		94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */; };
 		94BD08541BDC9482005C1FCA /* calc-25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08531BDC9482005C1FCA /* calc-25x25.png */; };
 		94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08551BDC96C8005C1FCA /* weight-30x25.png */; };
 		94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */; };
@@ -65,19 +63,17 @@
 		947325451B805C3D00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		947325461B805C3D00F4B1FD /* amatrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amatrackerTests.swift; sourceTree = "<group>"; };
 		947325501B805EE800F4B1FD /* MovementListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementListViewController.swift; sourceTree = "<group>"; };
-		947325521B8060CE00F4B1FD /* MovementTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementTableCell.swift; sourceTree = "<group>"; };
 		947325541B80670100F4B1FD /* MovementDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementDetailViewController.swift; sourceTree = "<group>"; };
 		947325561B80704D00F4B1FD /* AddRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
-		947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementRecordTableCell.swift; sourceTree = "<group>"; };
 		9473255E1B80C4E400F4B1FD /* Movement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movement.swift; path = ../Movement.swift; sourceTree = "<group>"; };
 		947325601B80CC6600F4B1FD /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
 		947325631B80DA1000F4B1FD /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		9474C4FA1C06F1EB00901D00 /* amatracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "amatracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		9474C4FF1C07015900901D00 /* MixpanelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixpanelService.swift; sourceTree = "<group>"; };
 		9477E4D61C5508D300222D54 /* MeasurementUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementUnit.swift; sourceTree = "<group>"; };
+		94BA6D321D0A23CB00F57D15 /* TableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCells.swift; sourceTree = "<group>"; };
 		94BD08461BDB35D1005C1FCA /* MovementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementService.swift; sourceTree = "<group>"; };
 		94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentagesViewController.swift; sourceTree = "<group>"; };
-		94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentageTableCell.swift; sourceTree = "<group>"; };
 		94BD08531BDC9482005C1FCA /* calc-25x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calc-25x25.png"; sourceTree = "<group>"; };
 		94BD08551BDC96C8005C1FCA /* weight-30x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weight-30x25.png"; sourceTree = "<group>"; };
 		94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CF-Amatak-500.png"; sourceTree = "<group>"; };
@@ -233,9 +229,7 @@
 		94BD084A1BDB3EFD005C1FCA /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
-				947325521B8060CE00F4B1FD /* MovementTableCell.swift */,
-				947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */,
-				94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */,
+				94BA6D321D0A23CB00F57D15 /* TableCells.swift */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -433,14 +427,12 @@
 				94BD08491BDB3DF3005C1FCA /* PercentagesViewController.swift in Sources */,
 				947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */,
 				947325611B80CC6600F4B1FD /* Record.swift in Sources */,
-				94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */,
-				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
+				94BA6D331D0A23CB00F57D15 /* TableCells.swift in Sources */,
 				9477E4D71C5508D300222D54 /* MeasurementUnit.swift in Sources */,
 				94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */,
 				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
 				9474C5001C07015900901D00 /* MixpanelService.swift in Sources */,
 				947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */,
-				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
 				947325641B80DA1000F4B1FD /* RecordService.swift in Sources */,
 				947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */,
 				9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */,
