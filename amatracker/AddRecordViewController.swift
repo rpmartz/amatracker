@@ -67,8 +67,8 @@ class AddRecordViewController: UIViewController {
         let entityDescription = NSEntityDescription.entity(forEntityName: "Record", in: managedObjectContext!)
         
         let record = Record(entity: entityDescription!, insertInto: managedObjectContext!)
-        record.numberOfReps = NSNumber(reps)
-        record.weight = NSNumber(weightLifted)
+        record.numberOfReps = NSNumber(value: reps)
+        record.weight = NSNumber(value: weightLifted)
         record.date = recordDate
         record.movement = currentMovement
         record.unit = "kg"

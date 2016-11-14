@@ -20,7 +20,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     
     func loadRecords() {
         let fetchedRecords = recordService.loadRecordsByMovement(movement)
-        records = fetchedRecords
+        records = fetchedRecords!
     }
     
     override func viewWillAppear(_ animated: Bool) {
