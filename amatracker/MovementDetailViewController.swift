@@ -20,10 +20,10 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     
     func loadRecords() {
         let fetchedRecords = recordService.loadRecordsByMovement(movement)
-        records = fetchedRecords
+        records = fetchedRecords!
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         loadRecords()
         self.movementRecordTableView.reloadData()
         self.navigationItem.title = movement.name
@@ -36,10 +36,10 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     // MARK: UITableViewDataSource functions
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let record = records[indexPath.row]
-        let cell = self.movementRecordTableView.dequeueReusableCellWithIdentifier("movementRecordCell") as! MovementRecordTableCell
+        let cell = self.movementRecordTableView.dequeueReusableCell(withIdentifier: "movementRecordCell") as! MovementRecordTableCell
         
         var repDescription: String?
         if record.numberOfReps == 1 {
@@ -50,48 +50,48 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         }
         cell.recordLabel.text = "\(record.numberOfReps) \(repDescription!)"
         
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MMM-yyyy"
-        cell.dateLabel.text = dateFormatter.stringFromDate(record.date)
+        cell.dateLabel.text = dateFormatter.string(from: record.date as Date)
         cell.weightLabel.text = "\(record.weight) kg"
         
         return cell
         
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return records.count
     }
     
     // MARK: UITableViewDelegate functions
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         // TODO: implement something here
     }
     
     
-    @IBAction func addRecordButtonPressed(sender: AnyObject) {
-        performSegueWithIdentifier(ADD_RECORD_SEGUE, sender: nil)
+    @IBAction func addRecordButtonPressed(_ sender: AnyObject) {
+        performSegue(withIdentifier: ADD_RECORD_SEGUE, sender: nil)
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let record = records[indexPath.row]
         if(record.numberOfReps == 1) {
-            performSegueWithIdentifier(SHOW_PERCENTAGES_SEGUE, sender: nil)
+            performSegue(withIdentifier: SHOW_PERCENTAGES_SEGUE, sender: nil)
         }
     }
     
 
     
     // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == ADD_RECORD_SEGUE {
-            let destinationViewController: AddRecordViewController = segue.destinationViewController as! AddRecordViewController
+            let destinationViewController: AddRecordViewController = segue.destination as! AddRecordViewController
             destinationViewController.currentMovement = self.movement
         }
         else if segue.identifier == SHOW_PERCENTAGES_SEGUE {
-            let destinationViewController: PercentagesViewController = segue.destinationViewController as! PercentagesViewController
+            let destinationViewController: PercentagesViewController = segue.destination as! PercentagesViewController
             
             let selectedRecord = records[movementRecordTableView.indexPathForSelectedRow!.row]
             let selectedRecordWeight = selectedRecord.weight.floatValue
@@ -100,14 +100,14 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-    @IBAction func segmentedControlPressed(sender: UISegmentedControl) {
+    @IBAction func segmentedControlPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            records.sortInPlace(sortByDate)
+            records.sort(by: sortByDate)
             self.movementRecordTableView.reloadData()
            
         case 1:
-            records.sortInPlace(sortByWeight)
+            records.sort(by: sortByWeight)
             self.movementRecordTableView.reloadData()
             
         default:
@@ -115,21 +115,21 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
-    func sortByWeight(rec1: Record, rec2: Record) -> Bool {
+    func sortByWeight(_ rec1: Record, rec2: Record) -> Bool {
         return rec1.weight as Double > rec2.weight as Double
     }
     
-    func sortByDate(rec1: Record, rec2: Record) -> Bool {
+    func sortByDate(_ rec1: Record, rec2: Record) -> Bool {
         return rec1.date.timeIntervalSince1970 > rec2.date.timeIntervalSince1970
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.Delete {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
             let recordToDelete: Record = records[indexPath.row]
             recordService.deleteRecord(recordToDelete)
             
-            records.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            records.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
     

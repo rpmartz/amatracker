@@ -7,18 +7,18 @@ class CalculatorViewController: UIViewController {
     
     let mixpanel = MixpanelService()
     
-    @IBAction func showPercentagesButtonPressed(sender: UIButton) {
-        self.performSegueWithIdentifier("showPercentagesSegue", sender: self)
+    @IBAction func showPercentagesButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "showPercentagesSegue", sender: self)
         // segue to new controller
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CalculatorViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         mixpanel.track("Calculator Scene Viewed")
     }
@@ -31,20 +31,20 @@ class CalculatorViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPercentagesSegue" {
-            let destVC : PercentagesViewController = segue.destinationViewController as! PercentagesViewController
+            let destVC : PercentagesViewController = segue.destination as! PercentagesViewController
             
             let weight = NSString(string: weightTextField.text!).floatValue
             
             
             // outlets are nil right now, so set a property and then update it in view percentage's viewDidLoad()
             if self.unitsControl!.selectedSegmentIndex == 0 {
-                destVC.units = .Kilograms
+                destVC.units = .kilograms
                 destVC.oneRepMaxWeightInKgs = weight
             }
             else {
-                destVC.units = .Pounds
+                destVC.units = .pounds
                 
                 let divisor : Float = 2.2
                 destVC.oneRepMaxWeightInKgs = weight / divisor // convert to lbs
@@ -53,8 +53,8 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 
 }

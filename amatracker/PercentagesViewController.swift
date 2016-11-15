@@ -7,7 +7,7 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
     let mixpanel = MixpanelService()
     
     var oneRepMaxWeightInKgs: Float = Float()
-    var units : MeasurementUnit = .Kilograms
+    var units : MeasurementUnit = .kilograms
     
     @IBOutlet weak var percentagesTableView: UITableView!
     @IBOutlet weak var unitsControl: UISegmentedControl!
@@ -19,24 +19,24 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if units == .Pounds {
+        if units == .pounds {
             self.unitsControl!.selectedSegmentIndex = 1
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         mixpanel.track("Percentages Table Viewed")
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: PercentageTableCell = tableView.dequeueReusableCellWithIdentifier("percentageCell") as! PercentageTableCell
+        let cell: PercentageTableCell = tableView.dequeueReusableCell(withIdentifier: "percentageCell") as! PercentageTableCell
         
         let currentRowPercentage = percentages[indexPath.row]
         
-        if units == MeasurementUnit.Kilograms {
+        if units == MeasurementUnit.kilograms {
             let percentage : Int = Int(currentRowPercentage * oneRepMaxWeightInKgs)
             cell.weightTextLabel.text = "\(percentage) kg"
         }
@@ -50,26 +50,26 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return percentages.count
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 
-    @IBAction func unitsToggleChanged(sender: UISegmentedControl) {
+    @IBAction func unitsToggleChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            self.units = .Kilograms
+            self.units = .kilograms
         }
         else {
-            self.units = .Pounds
+            self.units = .pounds
         }
         self.percentagesTableView.reloadData()
     }
     
-    @IBAction func closeButtonPressed(sender: UIButton) {
-        self.dismissViewControllerAnimated(false) { () -> Void in
+    @IBAction func closeButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: false) { () -> Void in
             
         }
     }

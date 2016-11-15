@@ -23,18 +23,18 @@ class AddRecordViewController: UIViewController {
         
         repsLabel.text = Int(stepper.value).description
         
-        datePicker.datePickerMode = UIDatePickerMode.Date
-        datePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
-        datePicker.performSelector("setHighlightsToday:", withObject:UIColor.whiteColor())
-        datePicker.maximumDate = NSDate()
+        datePicker.datePickerMode = UIDatePickerMode.date
+        datePicker.setValue(UIColor.white, forKey: "textColor")
+        datePicker.setValue(true, forKey: "highlightsToday")
+        datePicker.maximumDate = Date()
         
         // when user touches outside keyboard, keyboard should go away
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddRecordViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         mixpanel.track("Add Record Scene Viewed", properties: ["movement": currentMovement!.name])
         self.weightTextField.becomeFirstResponder()
@@ -48,42 +48,42 @@ class AddRecordViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func stepperPressed(sender: UIStepper) {
+    @IBAction func stepperPressed(_ sender: UIStepper) {
          repsLabel.text = Int(sender.value).description
     }
  
-    @IBAction func cancelButtonPressed(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func saveButtonPressed(sender: UIButton) {
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
 
         let reps = Int(stepper.value)
         let recordDate = self.datePicker.date
         let weightLifted = getEnteredWeight()
         
-        let appDelegate : AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let appDelegate : AppDelegate = (UIApplication.shared.delegate as! AppDelegate)
         let managedObjectContext = appDelegate.managedObjectContext
-        let entityDescription = NSEntityDescription.entityForName("Record", inManagedObjectContext: managedObjectContext!)
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Record", in: managedObjectContext!)
         
-        let record = Record(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext!)
-        record.numberOfReps = reps
-        record.weight = weightLifted
+        let record = Record(entity: entityDescription!, insertInto: managedObjectContext!)
+        record.numberOfReps = NSNumber(value: reps)
+        record.weight = NSNumber(value: weightLifted)
         record.date = recordDate
         record.movement = currentMovement
         record.unit = "kg"
         
         appDelegate.saveContext()
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
-    private func getEnteredWeight() -> Float {
+    fileprivate func getEnteredWeight() -> Float {
         return (weightTextField.text! as NSString).floatValue
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
 }

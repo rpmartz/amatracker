@@ -16,12 +16,12 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
 
         movements = movementService.fetchMovements()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         mixpanel.track("Movement Table Viewed")
     }
@@ -32,40 +32,40 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     
     // MARK: UITableViewDataSource functions
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let currentMovement = movements[indexPath.row]
-        let cell: MovementTableCell = tableView.dequeueReusableCellWithIdentifier(MOVEMENT_TABLE_CELL) as! MovementTableCell
+        let cell: MovementTableCell = tableView.dequeueReusableCell(withIdentifier: MOVEMENT_TABLE_CELL) as! MovementTableCell
         cell.movementNameLabel.text = currentMovement.name
         
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movements.count
     }
     
     // MARK: UITableViewDelegate required functions
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier(MOVEMENT_DETAIL_SEGUE, sender: self)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: MOVEMENT_DETAIL_SEGUE, sender: self)
     }
 
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if(segue.identifier == MOVEMENT_DETAIL_SEGUE) {
-            let destinationViewController : MovementDetailViewController = segue.destinationViewController  as! MovementDetailViewController
+            let destinationViewController : MovementDetailViewController = segue.destination  as! MovementDetailViewController
             
-            let indexPathOfSelectedRow : NSIndexPath = self.movementTable.indexPathForSelectedRow!
+            let indexPathOfSelectedRow : IndexPath = self.movementTable.indexPathForSelectedRow!
             let selectedMovement = movements[indexPathOfSelectedRow.row]
             destinationViewController.movement = selectedMovement
         }
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 
 }
