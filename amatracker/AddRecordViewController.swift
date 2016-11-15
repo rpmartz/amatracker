@@ -25,7 +25,7 @@ class AddRecordViewController: UIViewController {
         
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.setValue(UIColor.white, forKey: "textColor")
-        datePicker.perform("setHighlightsToday:", with:UIColor.white)
+        datePicker.setValue(true, forKey: "highlightsToday")
         datePicker.maximumDate = Date()
         
         // when user touches outside keyboard, keyboard should go away
