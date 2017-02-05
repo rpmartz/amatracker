@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CC6E6E9063B513B53BDF2D6 /* Pods_amatracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76564C2C8EA3644B757EF8F1 /* Pods_amatracker.framework */; };
+		07CAB7F22EBB397C84D15E9C /* Pods_amatrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BBE80A04A996B08072959C /* Pods_amatrackerTests.framework */; };
+		5260546C388F38CDB9FDE35D /* Pods_amatrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D25F421490F34B5CCDBDD3E /* Pods_amatrackerUITests.framework */; };
 		9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473252D1B805C3C00F4B1FD /* AppDelegate.swift */; };
 		947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */; };
 		947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* CalclatorViewController.swift */; };
@@ -32,6 +33,7 @@
 		94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08551BDC96C8005C1FCA /* weight-30x25.png */; };
 		94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */; };
 		94BD085A1BDC9950005C1FCA /* amatak-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08591BDC9950005C1FCA /* amatak-144.png */; };
+		B188FA54E3CDCBF11E8C8FD6 /* Pods_amatracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DF75483B43769F686F78AD /* Pods_amatracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		76564C2C8EA3644B757EF8F1 /* Pods_amatracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amatracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		541E65BB273EE98045B2D881 /* Pods-amatrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amatrackerUITests/Pods-amatrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		579CE48525C26E8D5F9DF0A4 /* Pods-amatracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amatracker/Pods-amatracker.debug.xcconfig"; sourceTree = "<group>"; };
+		5D25F421490F34B5CCDBDD3E /* Pods_amatrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amatrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DF75483B43769F686F78AD /* Pods_amatracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amatracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7538981E8999615C5C795FDE /* Pods-amatracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-amatracker/Pods-amatracker.release.xcconfig"; sourceTree = "<group>"; };
+		81BBE80A04A996B08072959C /* Pods_amatrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amatrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		947325281B805C3C00F4B1FD /* amatracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amatracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9473252C1B805C3C00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9473252D1B805C3C00F4B1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +90,9 @@
 		94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CF-Amatak-500.png"; sourceTree = "<group>"; };
 		94BD08591BDC9950005C1FCA /* amatak-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amatak-144.png"; sourceTree = "<group>"; };
 		94D9EF9E1BE483E5006DE7E5 /* amatrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = amatrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC8DD5818FD730D550BD022D /* Pods-amatracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-amatracker/Pods-amatracker.release.xcconfig"; sourceTree = "<group>"; };
-		F7C2EBA2265C654E54288AD3 /* Pods-amatracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amatracker/Pods-amatracker.debug.xcconfig"; sourceTree = "<group>"; };
+		C5CC511D91ACDECDB4B6BCF1 /* Pods-amatrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-amatrackerTests/Pods-amatrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		E062E3A61122AAAABC999F90 /* Pods-amatrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amatrackerTests/Pods-amatrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F59A4ACBC38889C9CFF5F459 /* Pods-amatrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatrackerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-amatrackerUITests/Pods-amatrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC6E6E9063B513B53BDF2D6 /* Pods_amatracker.framework in Frameworks */,
+				B188FA54E3CDCBF11E8C8FD6 /* Pods_amatracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CAB7F22EBB397C84D15E9C /* Pods_amatrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,27 +116,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5260546C388F38CDB9FDE35D /* Pods_amatrackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E589499E0379515DDF5F692 /* Frameworks */ = {
+		4EFA824C670880207F9AA5E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				76564C2C8EA3644B757EF8F1 /* Pods_amatracker.framework */,
+				74DF75483B43769F686F78AD /* Pods_amatracker.framework */,
+				81BBE80A04A996B08072959C /* Pods_amatrackerTests.framework */,
+				5D25F421490F34B5CCDBDD3E /* Pods_amatrackerUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4E1A0E43195EDE8AAFE4A00B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F7C2EBA2265C654E54288AD3 /* Pods-amatracker.debug.xcconfig */,
-				DC8DD5818FD730D550BD022D /* Pods-amatracker.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		9473251F1B805C3C00F4B1FD = {
@@ -136,8 +139,8 @@
 				9473252A1B805C3C00F4B1FD /* amatracker */,
 				947325431B805C3D00F4B1FD /* amatrackerTests */,
 				947325291B805C3C00F4B1FD /* Products */,
-				4E1A0E43195EDE8AAFE4A00B /* Pods */,
-				2E589499E0379515DDF5F692 /* Frameworks */,
+				F92A4B7889994B9C5E414AB3 /* Pods */,
+				4EFA824C670880207F9AA5E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,6 +243,19 @@
 			name = TableCells;
 			sourceTree = "<group>";
 		};
+		F92A4B7889994B9C5E414AB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				579CE48525C26E8D5F9DF0A4 /* Pods-amatracker.debug.xcconfig */,
+				7538981E8999615C5C795FDE /* Pods-amatracker.release.xcconfig */,
+				E062E3A61122AAAABC999F90 /* Pods-amatrackerTests.debug.xcconfig */,
+				C5CC511D91ACDECDB4B6BCF1 /* Pods-amatrackerTests.release.xcconfig */,
+				541E65BB273EE98045B2D881 /* Pods-amatrackerUITests.debug.xcconfig */,
+				F59A4ACBC38889C9CFF5F459 /* Pods-amatrackerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,12 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9473254A1B805C3D00F4B1FD /* Build configuration list for PBXNativeTarget "amatracker" */;
 			buildPhases = (
-				83038B7CEAB43ADC651FE366 /* Check Pods Manifest.lock */,
+				B7C77957EC71588B19C76E7F /* [CP] Check Pods Manifest.lock */,
 				947325241B805C3C00F4B1FD /* Sources */,
 				947325251B805C3C00F4B1FD /* Frameworks */,
 				947325261B805C3C00F4B1FD /* Resources */,
-				248258610EEE0DE1F2ED6AB8 /* Embed Pods Frameworks */,
-				1710A7E7ED615BCD67FA6913 /* Copy Pods Resources */,
+				61EF50EFB79CF3CB54E9C304 /* [CP] Embed Pods Frameworks */,
+				0EDEEF477CB2F3861662DD38 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,9 +283,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9473254D1B805C3D00F4B1FD /* Build configuration list for PBXNativeTarget "amatrackerTests" */;
 			buildPhases = (
+				F9D7B947805BC81C2A13A1BE /* [CP] Check Pods Manifest.lock */,
 				9473253C1B805C3D00F4B1FD /* Sources */,
 				9473253D1B805C3D00F4B1FD /* Frameworks */,
 				9473253E1B805C3D00F4B1FD /* Resources */,
+				598006549CE359FB21AA7F67 /* [CP] Embed Pods Frameworks */,
+				D61A8FB855ABB2E1B04C3122 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,9 +304,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94D9EFA71BE483E5006DE7E5 /* Build configuration list for PBXNativeTarget "amatrackerUITests" */;
 			buildPhases = (
+				59CFCDDA780C20818319B173 /* [CP] Check Pods Manifest.lock */,
 				94D9EF9A1BE483E5006DE7E5 /* Sources */,
 				94D9EF9B1BE483E5006DE7E5 /* Frameworks */,
 				94D9EF9C1BE483E5006DE7E5 /* Resources */,
+				0BD74C3F27F1B24057381623 /* [CP] Embed Pods Frameworks */,
+				631BEB5BFF6EE417F305AFD7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -379,14 +401,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1710A7E7ED615BCD67FA6913 /* Copy Pods Resources */ = {
+		0BD74C3F27F1B24057381623 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amatrackerUITests/Pods-amatrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EDEEF477CB2F3861662DD38 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,14 +431,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amatracker/Pods-amatracker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		248258610EEE0DE1F2ED6AB8 /* Embed Pods Frameworks */ = {
+		598006549CE359FB21AA7F67 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amatrackerTests/Pods-amatrackerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59CFCDDA780C20818319B173 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		61EF50EFB79CF3CB54E9C304 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,19 +476,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amatracker/Pods-amatracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		83038B7CEAB43ADC651FE366 /* Check Pods Manifest.lock */ = {
+		631BEB5BFF6EE417F305AFD7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amatrackerUITests/Pods-amatrackerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7C77957EC71588B19C76E7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D61A8FB855ABB2E1B04C3122 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amatrackerTests/Pods-amatrackerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9D7B947805BC81C2A13A1BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -590,7 +702,7 @@
 		};
 		9473254B1B805C3D00F4B1FD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7C2EBA2265C654E54288AD3 /* Pods-amatracker.debug.xcconfig */;
+			baseConfigurationReference = 579CE48525C26E8D5F9DF0A4 /* Pods-amatracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -610,7 +722,7 @@
 		};
 		9473254C1B805C3D00F4B1FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC8DD5818FD730D550BD022D /* Pods-amatracker.release.xcconfig */;
+			baseConfigurationReference = 7538981E8999615C5C795FDE /* Pods-amatracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -629,6 +741,7 @@
 		};
 		9473254E1B805C3D00F4B1FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E062E3A61122AAAABC999F90 /* Pods-amatrackerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -650,6 +763,7 @@
 		};
 		9473254F1B805C3D00F4B1FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5CC511D91ACDECDB4B6BCF1 /* Pods-amatrackerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -667,6 +781,7 @@
 		};
 		94D9EFA51BE483E5006DE7E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 541E65BB273EE98045B2D881 /* Pods-amatrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = amatrackerUITests/Info.plist;
@@ -681,6 +796,7 @@
 		};
 		94D9EFA61BE483E5006DE7E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F59A4ACBC38889C9CFF5F459 /* Pods-amatrackerUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = amatrackerUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
