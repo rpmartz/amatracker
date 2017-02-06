@@ -79,7 +79,6 @@
 		9473255E1B80C4E400F4B1FD /* Movement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movement.swift; path = ../Movement.swift; sourceTree = "<group>"; };
 		947325601B80CC6600F4B1FD /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
 		947325631B80DA1000F4B1FD /* RecordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
-		9474C4FA1C06F1EB00901D00 /* amatracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "amatracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		9474C4FF1C07015900901D00 /* MixpanelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixpanelService.swift; sourceTree = "<group>"; };
 		9477E4D61C5508D300222D54 /* MeasurementUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementUnit.swift; sourceTree = "<group>"; };
 		94BD08461BDB35D1005C1FCA /* MovementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementService.swift; sourceTree = "<group>"; };
@@ -167,7 +166,6 @@
 				947325391B805C3C00F4B1FD /* LaunchScreen.xib */,
 				9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */,
 				9473252B1B805C3C00F4B1FD /* Supporting Files */,
-				9474C4FA1C06F1EB00901D00 /* amatracker-Bridging-Header.h */,
 			);
 			path = amatracker;
 			sourceTree = "<group>";
