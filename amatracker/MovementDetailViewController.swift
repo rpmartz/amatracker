@@ -116,7 +116,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func sortByWeight(_ rec1: Record, rec2: Record) -> Bool {
-        return rec1.weight as Double > rec2.weight as Double
+        return rec1.weight as! Double > rec2.weight as! Double
     }
     
     func sortByDate(_ rec1: Record, rec2: Record) -> Bool {
