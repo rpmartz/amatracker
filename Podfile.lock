@@ -1,13 +1,11 @@
 PODS:
-  - Mixpanel (3.0.9):
-    - Mixpanel/Mixpanel (= 3.0.9)
-  - Mixpanel/Mixpanel (3.0.9)
+  - Mixpanel (3.1.8)
 
 DEPENDENCIES:
   - Mixpanel
 
 SPEC CHECKSUMS:
-  Mixpanel: 106bad33d5b9a05312316a01938f17b6baa2d99f
+  Mixpanel: 1e04a58533472e5675ea0a476af02ee8751aaa08
 
 PODFILE CHECKSUM: 64d23bfbf95ba70e9500b8cdc25747bbbdcfa40a
 
