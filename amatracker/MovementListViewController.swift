@@ -1,5 +1,6 @@
 import UIKit
 import CoreData
+import Mixpanel
 
 class MovementListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
@@ -11,7 +12,6 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     
     var movements : [Movement] = []
     let movementService = MovementService()
-    let mixpanel = MixpanelService()
     
     
     override func viewDidLoad() {
@@ -19,11 +19,14 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
 
         movements = movementService.fetchMovements()
+        
+        if let mixpanel = Mixpanel.sharedInstance() {
+             mixpanel.track("Movement Table Viewed")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        mixpanel.track("Movement Table Viewed")
     }
     
     override func didReceiveMemoryWarning() {

@@ -1,5 +1,6 @@
 import UIKit
 import CoreData
+import Mixpanel
 
 class AddRecordViewController: UIViewController {
     
@@ -10,7 +11,6 @@ class AddRecordViewController: UIViewController {
     
     var currentMovement: Movement!
     var pickerData: [[NSString]]!
-    let mixpanel = MixpanelService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +31,15 @@ class AddRecordViewController: UIViewController {
         // when user touches outside keyboard, keyboard should go away
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddRecordViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        if let mixpanel = Mixpanel.sharedInstance() {
+            mixpanel.track("Add Record Scene Viewed", properties: ["movement": currentMovement!.name])
+        }
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        mixpanel.track("Add Record Scene Viewed", properties: ["movement": currentMovement!.name])
         self.weightTextField.becomeFirstResponder()
     }
 

@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
+import Mixpanel
 
 class PercentagesViewController : UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     let POUNDS_TO_KILOS_RATE : Float = 2.2
-    let mixpanel = MixpanelService()
     
     var oneRepMaxWeightInKgs: Float = Float()
     var units : MeasurementUnit = .kilograms
@@ -22,11 +22,15 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         if units == .pounds {
             self.unitsControl!.selectedSegmentIndex = 1
         }
+        
+        if let mixpanel = Mixpanel.sharedInstance() {
+            mixpanel.track("Percentages Table Viewed")
+        }
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        mixpanel.track("Percentages Table Viewed")
     }
     
     
