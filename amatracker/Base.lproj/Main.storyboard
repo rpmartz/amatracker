@@ -423,7 +423,7 @@
         <scene sceneID="6lO-b4-rqW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hrg-Xj-Kif" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Movements" image="weight-30x25.png" id="tPc-oJ-VSx"/>
+                    <tabBarItem key="tabBarItem" title="Movements" image="barbell" id="tPc-oJ-VSx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c7A-aR-D07">
                         <autoresizingMask key="autoresizingMask"/>
@@ -559,8 +559,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="barbell" width="24" height="24"/>
         <image name="calculator" width="24" height="24"/>
-        <image name="weight-30x25.png" width="30" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3rJ-hH-iHx"/>
