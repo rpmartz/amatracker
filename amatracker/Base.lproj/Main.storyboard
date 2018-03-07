@@ -337,7 +337,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hJB-fF-YRZ">
-                                <rect key="frame" x="0.0" y="103" width="375" height="513"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="552"/>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movementTableCell" rowHeight="50" id="VYY-xv-CXu" customClass="MovementTableCell" customModule="amatracker" customModuleProvider="target">
@@ -379,7 +379,7 @@
                             <constraint firstItem="UMR-t9-THV" firstAttribute="top" secondItem="hJB-fF-YRZ" secondAttribute="bottom" constant="2" id="6kx-Al-5E2"/>
                             <constraint firstAttribute="trailing" secondItem="hJB-fF-YRZ" secondAttribute="trailing" id="fVq-3u-fIg"/>
                             <constraint firstItem="hJB-fF-YRZ" firstAttribute="leading" secondItem="aJ6-vr-vz9" secondAttribute="leading" id="ftp-Gp-C4A"/>
-                            <constraint firstItem="hJB-fF-YRZ" firstAttribute="top" secondItem="aJ6-vr-vz9" secondAttribute="topMargin" constant="39" id="j7T-vP-Fga"/>
+                            <constraint firstItem="hJB-fF-YRZ" firstAttribute="top" secondItem="aJ6-vr-vz9" secondAttribute="topMargin" id="j7T-vP-Fga"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movements" id="UkK-xD-X0p"/>
