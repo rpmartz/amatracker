@@ -43,7 +43,7 @@ class AddRecordViewController: UIViewController {
         self.weightTextField.becomeFirstResponder()
     }
 
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
