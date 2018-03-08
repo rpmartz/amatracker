@@ -1,12 +1,41 @@
 PODS:
+  - KSCrash/Core (1.15.18):
+    - KSCrash/Reporting/Filters/Basic
+  - KSCrash/Recording (1.15.18):
+    - KSCrash/Recording/Tools (= 1.15.18)
+  - KSCrash/Recording/Tools (1.15.18)
+  - KSCrash/Reporting/Filters/Base (1.15.18):
+    - KSCrash/Recording
+  - KSCrash/Reporting/Filters/Basic (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
   - Mixpanel (3.2.7)
+  - Sentry (3.12.0):
+    - Sentry/Core (= 3.12.0)
+    - Sentry/KSCrash (= 3.12.0)
+  - Sentry/Core (3.12.0)
+  - Sentry/KSCrash (3.12.0):
+    - KSCrash/Core (~> 1.15.12)
 
 DEPENDENCIES:
   - Mixpanel
+  - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `3.12.0`)
+
+EXTERNAL SOURCES:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 3.12.0
+
+CHECKOUT OPTIONS:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 3.12.0
 
 SPEC CHECKSUMS:
+  KSCrash: 5394936f41e5c1ef7b79cf79b30d53299b0c160e
   Mixpanel: 34568617004230e044428caebc7b515d22e80baa
+  Sentry: 74233cedacdd605a8eec77ede4eaacc5afe16b5c
 
-PODFILE CHECKSUM: 64d23bfbf95ba70e9500b8cdc25747bbbdcfa40a
+PODFILE CHECKSUM: 7728cb72ce8331a90ffc806b169d162d2cb22609
 
 COCOAPODS: 1.4.0

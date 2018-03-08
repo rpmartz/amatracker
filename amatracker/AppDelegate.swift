@@ -1,6 +1,7 @@
 import UIKit
 import CoreData
 import Mixpanel
+import Sentry
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,10 +10,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-       
+        // Override point for customization after application launch
         Mixpanel.sharedInstance(withToken: "80a114d37b7ab76a0d9835b02a47041f")
+        
+        do {
+            Client.shared = try Client(dsn: "https://55ebcbca9f5d4cf8abfe52544f8ff9de:7d46c81ee8b64cd0be8c9ead22e23f0d@sentry.io/300352")
+            try Client.shared?.startCrashHandler()
+        } catch let error {
+            print("\(error)")
+        }
+        
         return true
     }
 
