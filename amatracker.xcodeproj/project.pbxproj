@@ -157,7 +157,7 @@
 				94BD084A1BDB3EFD005C1FCA /* TableCells */,
 				947325621B80D9FE00F4B1FD /* Services */,
 				9473255D1B80C42C00F4B1FD /* Models */,
-				9473255C1B80C40B00F4B1FD /* Controllers */,
+				9473255C1B80C40B00F4B1FD /* View Controllers */,
 				9473252D1B805C3C00F4B1FD /* AppDelegate.swift */,
 				947325341B805C3C00F4B1FD /* Main.storyboard */,
 				947325371B805C3C00F4B1FD /* Images.xcassets */,
@@ -197,7 +197,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9473255C1B80C40B00F4B1FD /* Controllers */ = {
+		9473255C1B80C40B00F4B1FD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				947325561B80704D00F4B1FD /* AddRecordViewController.swift */,
@@ -206,7 +206,7 @@
 				947325321B805C3C00F4B1FD /* CalclatorViewController.swift */,
 				94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */,
 			);
-			name = Controllers;
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		9473255D1B80C42C00F4B1FD /* Models */ = {
