@@ -11,6 +11,8 @@
 		5260546C388F38CDB9FDE35D /* Pods_amatrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D25F421490F34B5CCDBDD3E /* Pods_amatrackerUITests.framework */; };
 		946A876520685F1100118066 /* MovementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A876420685F1100118066 /* MovementListViewModel.swift */; };
 		946A876720685F4400118066 /* MovementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A876620685F4400118066 /* MovementViewModel.swift */; };
+		946A876A206866DD00118066 /* MovementListViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A8769206866DD00118066 /* MovementListViewController+TableViewDataSource.swift */; };
+		946A876C2068672900118066 /* MovementListVC+TableViewDeletage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A876B2068672900118066 /* MovementListVC+TableViewDeletage.swift */; };
 		9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473252D1B805C3C00F4B1FD /* AppDelegate.swift */; };
 		947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */; };
 		947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* CalclatorViewController.swift */; };
@@ -63,6 +65,8 @@
 		81BBE80A04A996B08072959C /* Pods_amatrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amatrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		946A876420685F1100118066 /* MovementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementListViewModel.swift; sourceTree = "<group>"; };
 		946A876620685F4400118066 /* MovementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementViewModel.swift; sourceTree = "<group>"; };
+		946A8769206866DD00118066 /* MovementListViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementListViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		946A876B2068672900118066 /* MovementListVC+TableViewDeletage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementListVC+TableViewDeletage.swift"; sourceTree = "<group>"; };
 		947325281B805C3C00F4B1FD /* amatracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amatracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9473252C1B805C3C00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9473252D1B805C3C00F4B1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 		946A876220685ED100118066 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				946A8769206866DD00118066 /* MovementListViewController+TableViewDataSource.swift */,
+				946A876B2068672900118066 /* MovementListVC+TableViewDeletage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -604,8 +610,10 @@
 				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
 				946A876520685F1100118066 /* MovementListViewModel.swift in Sources */,
 				947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */,
+				946A876A206866DD00118066 /* MovementListViewController+TableViewDataSource.swift in Sources */,
 				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
 				947325641B80DA1000F4B1FD /* RecordService.swift in Sources */,
+				946A876C2068672900118066 /* MovementListVC+TableViewDeletage.swift in Sources */,
 				947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */,
 				9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */,
 				9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */,
