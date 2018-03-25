@@ -7,4 +7,8 @@ struct MovementViewModel {
     init(movement: Movement) {
         self.movement = movement
     }
+    
+    var name : String {
+        return movement.name
+    }
 }

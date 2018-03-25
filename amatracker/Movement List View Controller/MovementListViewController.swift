@@ -5,28 +5,29 @@ import Mixpanel
 class MovementListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     // MARK: Constants
-    let MOVEMENT_TABLE_CELL = "movementTableCell"
     let MOVEMENT_DETAIL_SEGUE = "movementDetailSegue"
 
     @IBOutlet weak var movementTable: UITableView!
     
-    var movements : [Movement] = []
+    var viewModel: MovementListViewModel!
     let movementService = MovementService()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
 
-        movements = movementService.fetchMovements()
-        
-        if let mixpanel = Mixpanel.sharedInstance() {
-             mixpanel.track("Movement Table Viewed")
-        }
+        let movements = movementService.fetchMovements()
+        viewModel = MovementListViewModel(movements: movements)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let mixpanel = Mixpanel.sharedInstance() {
+            mixpanel.track("Movement Table Viewed")
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,15 +38,17 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let currentMovement = movements[indexPath.row]
-        let cell: MovementTableCell = tableView.dequeueReusableCell(withIdentifier: MOVEMENT_TABLE_CELL) as! MovementTableCell
-        cell.movementNameLabel.text = currentMovement.name
+        guard let movementViewModel = viewModel.movementViewModel(for: indexPath.row) else {
+            fatalError("Could not getfind movement view model")
+        }
+        let cell: MovementTableCell = tableView.dequeueReusableCell(withIdentifier: MovementTableCell.reuseIdentifier) as! MovementTableCell
+        cell.configure(fromViewModel: movementViewModel)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movements.count
+        return viewModel.numberOfMovements
     }
     
     // MARK: UITableViewDelegate required functions
@@ -61,7 +64,7 @@ class MovementListViewController: UIViewController, UITableViewDataSource, UITab
             let destinationViewController : MovementDetailViewController = segue.destination  as! MovementDetailViewController
             
             let indexPathOfSelectedRow : IndexPath = self.movementTable.indexPathForSelectedRow!
-            let selectedMovement = movements[indexPathOfSelectedRow.row]
+            let selectedMovement = viewModel.movementViewModel(for: indexPathOfSelectedRow.row)?.movement
             destinationViewController.movement = selectedMovement
         }
         
