@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		07CAB7F22EBB397C84D15E9C /* Pods_amatrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BBE80A04A996B08072959C /* Pods_amatrackerTests.framework */; };
 		5260546C388F38CDB9FDE35D /* Pods_amatrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D25F421490F34B5CCDBDD3E /* Pods_amatrackerUITests.framework */; };
+		946A876520685F1100118066 /* MovementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A876420685F1100118066 /* MovementListViewModel.swift */; };
+		946A876720685F4400118066 /* MovementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A876620685F4400118066 /* MovementViewModel.swift */; };
 		9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473252D1B805C3C00F4B1FD /* AppDelegate.swift */; };
 		947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */; };
 		947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* CalclatorViewController.swift */; };
@@ -59,6 +61,8 @@
 		74DF75483B43769F686F78AD /* Pods_amatracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amatracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7538981E8999615C5C795FDE /* Pods-amatracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-amatracker/Pods-amatracker.release.xcconfig"; sourceTree = "<group>"; };
 		81BBE80A04A996B08072959C /* Pods_amatrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amatrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		946A876420685F1100118066 /* MovementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementListViewModel.swift; sourceTree = "<group>"; };
+		946A876620685F4400118066 /* MovementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementViewModel.swift; sourceTree = "<group>"; };
 		947325281B805C3C00F4B1FD /* amatracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amatracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9473252C1B805C3C00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9473252D1B805C3C00F4B1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,9 +137,27 @@
 		946A876120685D6000118066 /* Movement List View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				946A876320685EF300118066 /* View Models */,
+				946A876220685ED100118066 /* Extensions */,
 				947325501B805EE800F4B1FD /* MovementListViewController.swift */,
 			);
 			path = "Movement List View Controller";
+			sourceTree = "<group>";
+		};
+		946A876220685ED100118066 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		946A876320685EF300118066 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				946A876420685F1100118066 /* MovementListViewModel.swift */,
+				946A876620685F4400118066 /* MovementViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		9473251F1B805C3C00F4B1FD = {
@@ -566,11 +588,13 @@
 				94BD08491BDB3DF3005C1FCA /* PercentagesViewController.swift in Sources */,
 				947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */,
 				947325611B80CC6600F4B1FD /* Record.swift in Sources */,
+				946A876720685F4400118066 /* MovementViewModel.swift in Sources */,
 				94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */,
 				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
 				9477E4D71C5508D300222D54 /* MeasurementUnit.swift in Sources */,
 				94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */,
 				947325571B80704D00F4B1FD /* AddRecordViewController.swift in Sources */,
+				946A876520685F1100118066 /* MovementListViewModel.swift in Sources */,
 				947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */,
 				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
 				947325641B80DA1000F4B1FD /* RecordService.swift in Sources */,
