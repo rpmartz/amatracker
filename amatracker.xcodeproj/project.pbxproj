@@ -130,6 +130,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		946A876120685D6000118066 /* Movement List View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				947325501B805EE800F4B1FD /* MovementListViewController.swift */,
+			);
+			path = "Movement List View Controller";
+			sourceTree = "<group>";
+		};
 		9473251F1B805C3C00F4B1FD = {
 			isa = PBXGroup;
 			children = (
@@ -200,9 +208,9 @@
 		9473255C1B80C40B00F4B1FD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				946A876120685D6000118066 /* Movement List View Controller */,
 				947325561B80704D00F4B1FD /* AddRecordViewController.swift */,
 				947325541B80670100F4B1FD /* MovementDetailViewController.swift */,
-				947325501B805EE800F4B1FD /* MovementListViewController.swift */,
 				947325321B805C3C00F4B1FD /* CalclatorViewController.swift */,
 				94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */,
 			);
