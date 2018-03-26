@@ -178,9 +178,18 @@
 		946A8770206909BA00118066 /* Movement Detail View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				946A8771206909F900118066 /* Table View Cells */,
 				947325541B80670100F4B1FD /* MovementDetailViewController.swift */,
 			);
 			path = "Movement Detail View Controller";
+			sourceTree = "<group>";
+		};
+		946A8771206909F900118066 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */,
+			);
+			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		9473251F1B805C3C00F4B1FD = {
@@ -284,7 +293,6 @@
 		94BD084A1BDB3EFD005C1FCA /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
-				947325581B80728E00F4B1FD /* MovementRecordTableCell.swift */,
 				94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */,
 			);
 			name = TableCells;
