@@ -18,7 +18,7 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         loadRecords()
     }
     
-    func loadRecords() {
+    private func loadRecords() {
         let fetchedRecords = recordService.loadRecordsByMovement(movement)
         records = fetchedRecords!
     }
