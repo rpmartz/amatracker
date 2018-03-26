@@ -9,22 +9,27 @@ class MovementDetailViewController: UIViewController {
     @IBOutlet weak var movementRecordTableView: UITableView!
     
     var movement: Movement!
-    var records: [Record] = []
+    var viewModel : MovementDetailViewModel!
     
     let recordService = RecordService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadRecords()
+        let records = loadRecords()
+        viewModel = MovementDetailViewModel(movement: movement, records: records)
     }
     
-    private func loadRecords() {
-        let fetchedRecords = recordService.loadRecordsByMovement(movement)
-        records = fetchedRecords!
+    private func loadRecords() -> [Record] {
+        if let fetchedRecords = recordService.loadRecordsByMovement(movement) {
+           return fetchedRecords
+        }
+        
+        return []
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadRecords()
+        let records = loadRecords()
+        viewModel = MovementDetailViewModel(movement: movement, records: records)
         self.movementRecordTableView.reloadData()
         self.navigationItem.title = movement.name
         
@@ -52,9 +57,12 @@ class MovementDetailViewController: UIViewController {
         else if segue.identifier == SHOW_PERCENTAGES_SEGUE {
             let destinationViewController: PercentagesViewController = segue.destination as! PercentagesViewController
             
-            let selectedRecord = records[movementRecordTableView.indexPathForSelectedRow!.row]
-            let selectedRecordWeight = selectedRecord.weight.floatValue
-            destinationViewController.oneRepMaxWeightInKgs = selectedRecordWeight
+            if let selectedRecordIndex = movementRecordTableView.indexPathForSelectedRow?.row {
+                let selectedRecord = viewModel.recordViewModel(for: selectedRecordIndex)?.record
+                let selectedRecordWeight = selectedRecord?.weight.floatValue
+                destinationViewController.oneRepMaxWeightInKgs = selectedRecordWeight!
+            }
+            
         }
         
     }
