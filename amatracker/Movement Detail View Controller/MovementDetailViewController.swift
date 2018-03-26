@@ -16,12 +16,6 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         loadRecords()
-        
-        if let mixpanel = Mixpanel.sharedInstance() {
-            // todo fix scene name
-            mixpanel.track("Movement Detail Scene Viewed", properties: ["movement": movement.name])
-        }
-        
     }
     
     func loadRecords() {
@@ -33,6 +27,11 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         loadRecords()
         self.movementRecordTableView.reloadData()
         self.navigationItem.title = movement.name
+        
+        if let mixpanel = Mixpanel.sharedInstance() {
+            // todo fix scene name
+            mixpanel.track("Movement Detail Scene Viewed", properties: ["movement": movement.name])
+        }
     }
 
     override func didReceiveMemoryWarning() {
