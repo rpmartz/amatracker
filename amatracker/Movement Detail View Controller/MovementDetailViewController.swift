@@ -1,7 +1,7 @@
 import UIKit
 import Mixpanel
 
-class MovementDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MovementDetailViewController: UIViewController {
     
     let ADD_RECORD_SEGUE = "addRecordSegue"
     let SHOW_PERCENTAGES_SEGUE = "recordsToPercentagesSegue"
@@ -38,53 +38,9 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: UITableViewDataSource functions
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let record = records[indexPath.row]
-        let cell = self.movementRecordTableView.dequeueReusableCell(withIdentifier: "movementRecordCell") as! MovementRecordTableCell
-        
-        var repDescription: String?
-        if record.numberOfReps == 1 {
-            repDescription = "Rep"
-        }
-        else {
-            repDescription = "Reps"
-        }
-        cell.recordLabel.text = "\(record.numberOfReps) \(repDescription!)"
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MMM-yyyy"
-        cell.dateLabel.text = dateFormatter.string(from: record.date as Date)
-        cell.weightLabel.text = "\(record.weight) kg"
-        
-        return cell
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return records.count
-    }
-    
-    // MARK: UITableViewDelegate functions
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        // TODO: implement something here
-    }
-    
-    
     @IBAction func addRecordButtonPressed(_ sender: AnyObject) {
         performSegue(withIdentifier: ADD_RECORD_SEGUE, sender: nil)
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let record = records[indexPath.row]
-        if(record.numberOfReps == 1) {
-            performSegue(withIdentifier: SHOW_PERCENTAGES_SEGUE, sender: nil)
-        }
-    }
-    
-
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -126,16 +82,4 @@ class MovementDetailViewController: UIViewController, UITableViewDataSource, UIT
         return rec1.date.timeIntervalSince1970 > rec2.date.timeIntervalSince1970
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
-            let recordToDelete: Record = records[indexPath.row]
-            recordService.deleteRecord(recordToDelete)
-            
-            records.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-        }
-    }
-    
-    
-
 }

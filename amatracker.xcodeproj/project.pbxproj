@@ -13,6 +13,8 @@
 		946A876720685F4400118066 /* MovementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A876620685F4400118066 /* MovementViewModel.swift */; };
 		946A876A206866DD00118066 /* MovementListViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A8769206866DD00118066 /* MovementListViewController+TableViewDataSource.swift */; };
 		946A876C2068672900118066 /* MovementListVC+TableViewDeletage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A876B2068672900118066 /* MovementListVC+TableViewDeletage.swift */; };
+		946A877520690DE300118066 /* MovementDetailVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A877420690DE300118066 /* MovementDetailVC+TableViewDelegate.swift */; };
+		946A877720690DF600118066 /* MovementDetailVC+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A877620690DF600118066 /* MovementDetailVC+TableViewDataSource.swift */; };
 		9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473252D1B805C3C00F4B1FD /* AppDelegate.swift */; };
 		947325311B805C3C00F4B1FD /* amatracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9473252F1B805C3C00F4B1FD /* amatracker.xcdatamodeld */; };
 		947325331B805C3C00F4B1FD /* CalclatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947325321B805C3C00F4B1FD /* CalclatorViewController.swift */; };
@@ -67,6 +69,8 @@
 		946A876620685F4400118066 /* MovementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementViewModel.swift; sourceTree = "<group>"; };
 		946A8769206866DD00118066 /* MovementListViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementListViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		946A876B2068672900118066 /* MovementListVC+TableViewDeletage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementListVC+TableViewDeletage.swift"; sourceTree = "<group>"; };
+		946A877420690DE300118066 /* MovementDetailVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementDetailVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		946A877620690DF600118066 /* MovementDetailVC+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementDetailVC+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		947325281B805C3C00F4B1FD /* amatracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amatracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9473252C1B805C3C00F4B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9473252D1B805C3C00F4B1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		946A8770206909BA00118066 /* Movement Detail View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				946A877320690DCC00118066 /* Extensions */,
 				946A877220690A6200118066 /* View Models */,
 				946A8771206909F900118066 /* Table View Cells */,
 				947325541B80670100F4B1FD /* MovementDetailViewController.swift */,
@@ -198,6 +203,15 @@
 			children = (
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		946A877320690DCC00118066 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				946A877420690DE300118066 /* MovementDetailVC+TableViewDelegate.swift */,
+				946A877620690DF600118066 /* MovementDetailVC+TableViewDataSource.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9473251F1B805C3C00F4B1FD = {
@@ -628,6 +642,7 @@
 				947325611B80CC6600F4B1FD /* Record.swift in Sources */,
 				946A876720685F4400118066 /* MovementViewModel.swift in Sources */,
 				94BD084C1BDB3F10005C1FCA /* PercentageTableCell.swift in Sources */,
+				946A877720690DF600118066 /* MovementDetailVC+TableViewDataSource.swift in Sources */,
 				947325591B80728E00F4B1FD /* MovementRecordTableCell.swift in Sources */,
 				9477E4D71C5508D300222D54 /* MeasurementUnit.swift in Sources */,
 				94BD08471BDB35D1005C1FCA /* MovementService.swift in Sources */,
@@ -641,6 +656,7 @@
 				947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */,
 				9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */,
 				9473252E1B805C3C00F4B1FD /* AppDelegate.swift in Sources */,
+				946A877520690DE300118066 /* MovementDetailVC+TableViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
