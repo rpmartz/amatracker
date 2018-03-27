@@ -48,11 +48,11 @@ class MovementDetailViewModel {
     func sortRecords() {
         switch self.sortMode {
         case .date:
-            self.records = records.sorted {
+            records.sort {
                 $0.date.timeIntervalSince1970 > $1.date.timeIntervalSince1970
             }
         case .weight:
-            self.records = records.sorted {
+            records.sort {
                 $0.weight as! Double > $1.weight as! Double
             }
         }
