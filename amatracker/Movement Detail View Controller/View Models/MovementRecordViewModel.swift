@@ -24,7 +24,7 @@ struct MovementRecordViewModel {
     }
     
     var weightDescription : String {
-        return "\(recordViewModel.weight) kg"
+        return "\(record.weight) kg"
     }
    
 }
