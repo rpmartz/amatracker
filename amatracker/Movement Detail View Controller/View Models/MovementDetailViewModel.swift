@@ -1,9 +1,20 @@
 import Foundation
 
-struct MovementDetailViewModel {
+class MovementDetailViewModel {
+    
+    enum SortMode {
+        case weight
+        case date
+    }
     
     let movement: Movement
-    let records: [Record]
+    var records: [Record]
+    
+    var sortMode : SortMode = .date {
+        didSet {
+            self.sortRecords()
+        }
+    }
     
     init(movement: Movement, records: [Record]) {
         self.movement = movement
@@ -25,5 +36,27 @@ struct MovementDetailViewModel {
         
         return MovementRecordViewModel(record: records[index])
     }
+    
+    func removeRecordAt(index idx : Int) {
+        guard idx < records.count else {
+            return
+        }
+        
+        self.records.remove(at: idx)
+    }
+    
+    func sortRecords() {
+        switch self.sortMode {
+        case .date:
+            self.records = records.sorted {
+                $0.date.timeIntervalSince1970 > $1.date.timeIntervalSince1970
+            }
+        case .weight:
+            self.records = records.sorted {
+                $0.weight as! Double > $1.weight as! Double
+            }
+        }
+    }
+    
     
 }

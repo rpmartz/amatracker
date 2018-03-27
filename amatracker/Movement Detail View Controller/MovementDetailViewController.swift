@@ -70,11 +70,11 @@ class MovementDetailViewController: UIViewController {
     @IBAction func segmentedControlPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            records.sort(by: sortByDate)
+            viewModel.sortMode = .date
             self.movementRecordTableView.reloadData()
            
         case 1:
-            records.sort(by: sortByWeight)
+             viewModel.sortMode = .weight
             self.movementRecordTableView.reloadData()
             
         default:
