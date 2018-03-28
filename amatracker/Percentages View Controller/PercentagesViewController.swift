@@ -22,17 +22,17 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         if units == .pounds {
             self.unitsControl!.selectedSegmentIndex = 1
         }
-        
-        if let mixpanel = Mixpanel.sharedInstance() {
-            mixpanel.track("Percentages Table Viewed")
-        }
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let mixpanel = Mixpanel.sharedInstance() {
+            mixpanel.track("Percentages Table Viewed")
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
