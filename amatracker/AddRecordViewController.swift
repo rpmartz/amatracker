@@ -31,16 +31,17 @@ class AddRecordViewController: UIViewController {
         // when user touches outside keyboard, keyboard should go away
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddRecordViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
-        if let mixpanel = Mixpanel.sharedInstance() {
-            mixpanel.track("Add Record Scene Viewed", properties: ["movement": currentMovement!.name])
-        }
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.weightTextField.becomeFirstResponder()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let mixpanel = Mixpanel.sharedInstance() {
+            mixpanel.track("Add Record Scene Viewed", properties: ["movement": currentMovement!.name])
+        }
     }
 
     @objc func dismissKeyboard() {

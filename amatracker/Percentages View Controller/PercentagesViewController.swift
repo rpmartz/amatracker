@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import Mixpanel
 
-class PercentagesViewController : UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class PercentagesViewController : UIViewController {
     
     let POUNDS_TO_KILOS_RATE : Float = 2.2
     
@@ -16,51 +16,31 @@ class PercentagesViewController : UIViewController, UITableViewDataSource, UITab
         0.7, 0.75, 0.8, 0.85,
         0.9, 0.95, 1.0]
     
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if units == .pounds {
             self.unitsControl!.selectedSegmentIndex = 1
         }
-        
-        if let mixpanel = Mixpanel.sharedInstance() {
-            mixpanel.track("Percentages Table Viewed")
-        }
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell: PercentageTableCell = tableView.dequeueReusableCell(withIdentifier: "percentageCell") as! PercentageTableCell
-        
-        let currentRowPercentage = percentages[indexPath.row]
-        
-        if units == MeasurementUnit.kilograms {
-            let percentage : Int = Int(currentRowPercentage * oneRepMaxWeightInKgs)
-            cell.weightTextLabel.text = "\(percentage) kg"
+    override func viewDidAppear(_ animated: Bool) {
+        if let mixpanel = Mixpanel.sharedInstance() {
+            mixpanel.track("Percentages Table Viewed")
         }
-        else {
-            let percentage : Int = Int(currentRowPercentage * oneRepMaxWeightInKgs * POUNDS_TO_KILOS_RATE)
-            cell.weightTextLabel.text = "\(percentage) lbs"
-        }
-      
-        cell.percentageTextLabel.text = "\(currentRowPercentage * 100.0)% of 1RM"
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return percentages.count
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
+    
+    // MARK: - Outlets
 
     @IBAction func unitsToggleChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
