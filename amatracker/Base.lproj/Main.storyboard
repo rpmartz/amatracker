@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -15,6 +16,25 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Chart View Controller-->
+        <scene sceneID="hZu-bw-nek">
+            <objects>
+                <viewController id="R5z-R6-9c8" customClass="ChartViewController" customModule="amatracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h1s-lP-jSu"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Na-Yh-hEu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Bb-dV-pZM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p06-5m-5hW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPR-vg-xbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209" y="-609"/>
+        </scene>
         <!--Movement Detail View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -116,18 +136,27 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nGD-CS-5wo">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ziv-GL-Ps4">
-                            <color key="tintColor" red="0.92549019607843142" green="0.44705882352941173" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="addRecordButtonPressed:" destination="vXZ-lx-hvc" id="sPP-0y-LXY"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="ziv-GL-Ps4">
+                                <color key="tintColor" red="0.92549019607843142" green="0.44705882352941173" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="addRecordButtonPressed:" destination="vXZ-lx-hvc" id="sPP-0y-LXY"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="chart" id="ghS-vg-5OO">
+                                <color key="tintColor" red="0.9244391918182373" green="0.44576585292816162" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="viewChartButtonPressed:" destination="vXZ-lx-hvc" id="nuV-dE-lZe"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="movementRecordTableView" destination="kGP-kB-bd5" id="7US-pr-RC3"/>
                         <segue destination="XE8-1V-vKC" kind="modal" identifier="addRecordSegue" id="cKN-sG-TZD"/>
                         <segue destination="TKN-YQ-cRV" kind="modal" identifier="recordsToPercentagesSegue" id="png-Lx-Ja8"/>
+                        <segue destination="qh9-fK-mhc" kind="modal" identifier="detailToChartSegue" id="yD9-qO-BXg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -557,10 +586,29 @@
             </objects>
             <point key="canvasLocation" x="525" y="830"/>
         </scene>
+        <!--Chart Navigation Controller-->
+        <scene sceneID="KD9-qC-WpP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qh9-fK-mhc" userLabel="Chart Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1KE-Mx-mSu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R5z-R6-9c8" kind="relationship" relationship="rootViewController" id="GsI-aG-QAz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TU3-6a-XYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="-609"/>
+        </scene>
     </scenes>
     <resources>
         <image name="barbell" width="24" height="24"/>
         <image name="calculator" width="24" height="24"/>
+        <image name="chart" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="png-Lx-Ja8"/>

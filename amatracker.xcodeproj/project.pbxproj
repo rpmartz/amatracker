@@ -41,6 +41,7 @@
 		94BD08561BDC96C8005C1FCA /* weight-30x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08551BDC96C8005C1FCA /* weight-30x25.png */; };
 		94BD08581BDC97A2005C1FCA /* CF-Amatak-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */; };
 		94BD085A1BDC9950005C1FCA /* amatak-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BD08591BDC9950005C1FCA /* amatak-144.png */; };
+		94C52C07206BBBAF0075251A /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C52C06206BBBAF0075251A /* ChartViewController.swift */; };
 		B188FA54E3CDCBF11E8C8FD6 /* Pods_amatracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DF75483B43769F686F78AD /* Pods_amatracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		94BD08551BDC96C8005C1FCA /* weight-30x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weight-30x25.png"; sourceTree = "<group>"; };
 		94BD08571BDC97A2005C1FCA /* CF-Amatak-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CF-Amatak-500.png"; sourceTree = "<group>"; };
 		94BD08591BDC9950005C1FCA /* amatak-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amatak-144.png"; sourceTree = "<group>"; };
+		94C52C06206BBBAF0075251A /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		94D9EF9E1BE483E5006DE7E5 /* amatrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = amatrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CC511D91ACDECDB4B6BCF1 /* Pods-amatrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-amatrackerTests/Pods-amatrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E062E3A61122AAAABC999F90 /* Pods-amatrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amatrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amatrackerTests/Pods-amatrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		9473255C1B80C40B00F4B1FD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				94C52C08206BBBB40075251A /* Chart View Controller */,
 				942E26F6206BAF9300B3CE0D /* Percentages View Controller */,
 				946A8770206909BA00118066 /* Movement Detail View Controller */,
 				946A876120685D6000118066 /* Movement List View Controller */,
@@ -343,6 +346,14 @@
 				94BD08461BDB35D1005C1FCA /* MovementService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		94C52C08206BBBB40075251A /* Chart View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94C52C06206BBBAF0075251A /* ChartViewController.swift */,
+			);
+			path = "Chart View Controller";
 			sourceTree = "<group>";
 		};
 		F92A4B7889994B9C5E414AB3 /* Pods */ = {
@@ -680,6 +691,7 @@
 				947325531B8060CE00F4B1FD /* MovementTableCell.swift in Sources */,
 				947325641B80DA1000F4B1FD /* RecordService.swift in Sources */,
 				946A877B206910A500118066 /* MovementRecordViewModel.swift in Sources */,
+				94C52C07206BBBAF0075251A /* ChartViewController.swift in Sources */,
 				946A876C2068672900118066 /* MovementListVC+TableViewDeletage.swift in Sources */,
 				947325511B805EE800F4B1FD /* MovementListViewController.swift in Sources */,
 				9473255F1B80C4E400F4B1FD /* Movement.swift in Sources */,

@@ -5,6 +5,7 @@ class MovementDetailViewController: UIViewController {
     
     let ADD_RECORD_SEGUE = "addRecordSegue"
     let SHOW_PERCENTAGES_SEGUE = "recordsToPercentagesSegue"
+    let SHOW_CHART_SEGUE = "detailToChartSegue"
     
     @IBOutlet weak var movementRecordTableView: UITableView!
     
@@ -43,9 +44,16 @@ class MovementDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Outlets
+    
     @IBAction func addRecordButtonPressed(_ sender: AnyObject) {
         performSegue(withIdentifier: ADD_RECORD_SEGUE, sender: nil)
     }
+    
+    @IBAction func viewChartButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: SHOW_CHART_SEGUE, sender: nil)
+    }
+    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
