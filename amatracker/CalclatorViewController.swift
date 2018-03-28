@@ -15,15 +15,16 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CalculatorViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
-        if let mixpanel = Mixpanel.sharedInstance() {
-            mixpanel.track("Calculator Scene Viewed")
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-      
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let mixpanel = Mixpanel.sharedInstance() {
+            mixpanel.track("Calculator Scene Viewed")
+        }
     }
     
     @objc func dismissKeyboard() {
