@@ -9,7 +9,9 @@ extension PercentagesViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: PercentageTableCell = tableView.dequeueReusableCell(withIdentifier: "percentageCell") as! PercentageTableCell
+        guard let cell: PercentageTableCell = tableView.dequeueReusableCell(withIdentifier: PercentageTableCell.reuseIdentifier) as? PercentageTableCell else {
+            fatalError("Unexpected Table View cell")
+        }
         
         let currentRowPercentage = percentages[indexPath.row]
         
