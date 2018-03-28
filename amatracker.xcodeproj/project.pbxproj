@@ -146,6 +146,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		942E26F6206BAF9300B3CE0D /* Percentages View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */,
+			);
+			path = "Percentages View Controller";
+			sourceTree = "<group>";
+		};
 		946A876120685D6000118066 /* Movement List View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,11 +298,11 @@
 		9473255C1B80C40B00F4B1FD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				942E26F6206BAF9300B3CE0D /* Percentages View Controller */,
 				946A8770206909BA00118066 /* Movement Detail View Controller */,
 				946A876120685D6000118066 /* Movement List View Controller */,
 				947325561B80704D00F4B1FD /* AddRecordViewController.swift */,
 				947325321B805C3C00F4B1FD /* CalclatorViewController.swift */,
-				94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
