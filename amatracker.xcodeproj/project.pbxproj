@@ -151,6 +151,7 @@
 		942E26F6206BAF9300B3CE0D /* Percentages View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				942E26FA206BB14700B3CE0D /* Table View Cells */,
 				942E26F7206BB06900B3CE0D /* Extensions */,
 				94BD08481BDB3DF3005C1FCA /* PercentagesViewController.swift */,
 			);
@@ -163,6 +164,14 @@
 				942E26F8206BB07F00B3CE0D /* PercentagesvVC+TableView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		942E26FA206BB14700B3CE0D /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */,
+			);
+			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		946A876120685D6000118066 /* Movement List View Controller */ = {
@@ -263,7 +272,6 @@
 		9473252A1B805C3C00F4B1FD /* amatracker */ = {
 			isa = PBXGroup;
 			children = (
-				94BD084A1BDB3EFD005C1FCA /* TableCells */,
 				947325621B80D9FE00F4B1FD /* Services */,
 				9473255D1B80C42C00F4B1FD /* Models */,
 				9473255C1B80C40B00F4B1FD /* View Controllers */,
@@ -335,14 +343,6 @@
 				94BD08461BDB35D1005C1FCA /* MovementService.swift */,
 			);
 			name = Services;
-			sourceTree = "<group>";
-		};
-		94BD084A1BDB3EFD005C1FCA /* TableCells */ = {
-			isa = PBXGroup;
-			children = (
-				94BD084B1BDB3F10005C1FCA /* PercentageTableCell.swift */,
-			);
-			name = TableCells;
 			sourceTree = "<group>";
 		};
 		F92A4B7889994B9C5E414AB3 /* Pods */ = {
